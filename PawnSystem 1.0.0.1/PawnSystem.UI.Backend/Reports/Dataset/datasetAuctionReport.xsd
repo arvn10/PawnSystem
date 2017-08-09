@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="datasetAuctionReport" targetNamespace="http://tempuri.org/datasetAuctionReport.xsd" xmlns:mstns="http://tempuri.org/datasetAuctionReport.xsd" xmlns="http://tempuri.org/datasetAuctionReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="datasetAuctionReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="datasetAuctionReport" msprop:Generator_UserDSName="datasetAuctionReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="auctionReport" msprop:Generator_TableClassName="auctionReportDataTable" msprop:Generator_TableVarName="tableauctionReport" msprop:Generator_RowChangedName="auctionReportRowChanged" msprop:Generator_TablePropName="auctionReport" msprop:Generator_RowDeletingName="auctionReportRowDeleting" msprop:Generator_RowChangingName="auctionReportRowChanging" msprop:Generator_RowEvHandlerName="auctionReportRowChangeEventHandler" msprop:Generator_RowDeletedName="auctionReportRowDeleted" msprop:Generator_RowClassName="auctionReportRow" msprop:Generator_UserTableName="auctionReport" msprop:Generator_RowEvArgName="auctionReportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:string" minOccurs="0" />
+              <xs:element name="pawnTicketNumber" msprop:Generator_ColumnVarNameInTable="columnpawnTicketNumber" msprop:Generator_ColumnPropNameInRow="pawnTicketNumber" msprop:Generator_ColumnPropNameInTable="pawnTicketNumberColumn" msprop:Generator_UserColumnName="pawnTicketNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="clientName" msprop:Generator_ColumnVarNameInTable="columnclientName" msprop:Generator_ColumnPropNameInRow="clientName" msprop:Generator_ColumnPropNameInTable="clientNameColumn" msprop:Generator_UserColumnName="clientName" type="xs:string" minOccurs="0" />
+              <xs:element name="itemDescription" msprop:Generator_ColumnVarNameInTable="columnitemDescription" msprop:Generator_ColumnPropNameInRow="itemDescription" msprop:Generator_ColumnPropNameInTable="itemDescriptionColumn" msprop:Generator_UserColumnName="itemDescription" type="xs:string" minOccurs="0" />
+              <xs:element name="principal" msprop:Generator_ColumnVarNameInTable="columnprincipal" msprop:Generator_ColumnPropNameInRow="principal" msprop:Generator_ColumnPropNameInTable="principalColumn" msprop:Generator_UserColumnName="principal" type="xs:string" minOccurs="0" />
+              <xs:element name="interest" msprop:Generator_ColumnVarNameInTable="columninterest" msprop:Generator_ColumnPropNameInRow="interest" msprop:Generator_ColumnPropNameInTable="interestColumn" msprop:Generator_UserColumnName="interest" type="xs:string" minOccurs="0" />
+              <xs:element name="penalty" msprop:Generator_ColumnVarNameInTable="columnpenalty" msprop:Generator_ColumnPropNameInRow="penalty" msprop:Generator_ColumnPropNameInTable="penaltyColumn" msprop:Generator_UserColumnName="penalty" type="xs:string" minOccurs="0" />
+              <xs:element name="netProceed" msprop:Generator_ColumnVarNameInTable="columnnetProceed" msprop:Generator_ColumnPropNameInRow="netProceed" msprop:Generator_ColumnPropNameInTable="netProceedColumn" msprop:Generator_UserColumnName="netProceed" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

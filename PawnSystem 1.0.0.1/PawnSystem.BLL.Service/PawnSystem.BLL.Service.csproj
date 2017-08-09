@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0062C06-38C3-4A70-AD78-5AEE3CA570FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PawnSystem.BLL.Service</RootNamespace>
+    <AssemblyName>PawnSystem.BLL.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuctionDateService.cs" />
+    <Compile Include="ClientService.cs" />
+    <Compile Include="CrudService.cs" />
+    <Compile Include="IdTypeService.cs" />
+    <Compile Include="ItemTypeService.cs" />
+    <Compile Include="ReportService.cs" />
+    <Compile Include="TicketTypeService.cs" />
+    <Compile Include="TransactionItemService.cs" />
+    <Compile Include="TransactionService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="UserTypeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PawnSystem.BLL.IService\PawnSystem.BLL.IService.csproj">
+      <Project>{a37bce82-f14f-4cf2-bba0-f6f7812e0d1b}</Project>
+      <Name>PawnSystem.BLL.IService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.BLL.Model\PawnSystem.BLL.Model.csproj">
+      <Project>{dc65e9c6-0771-4ec7-8101-1f9adc97c9aa}</Project>
+      <Name>PawnSystem.BLL.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.DAL.Core\PawnSystem.DAL.Core.csproj">
+      <Project>{2b0625b1-e004-4298-b8da-b3dcaf4f4b93}</Project>
+      <Name>PawnSystem.DAL.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.DAL.Data\PawnSystem.DAL.Data.csproj">
+      <Project>{d076d04c-ff85-4184-a2c2-533bfcc36528}</Project>
+      <Name>PawnSystem.DAL.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70D41D94-AA7A-486E-9154-A951A35BD9BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PawnSystem.UI.Backend</RootNamespace>
+    <AssemblyName>PawnSystem.UI.Backend</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Coinstack.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NodaTime, Version=2.0.2.0, Culture=neutral, PublicKeyToken=4226afe0d9b296d1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NodaTime.2.0.2\lib\net45\NodaTime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\formAuctionDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formAuctionDate.Designer.cs">
+      <DependentUpon>formAuctionDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formAuctionDateProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formAuctionDateProcess.Designer.cs">
+      <DependentUpon>formAuctionDateProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formCamera.Designer.cs">
+      <DependentUpon>formCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formClient.Designer.cs">
+      <DependentUpon>formClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formClientProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formClientProcess.Designer.cs">
+      <DependentUpon>formClientProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formIdType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formIdType.Designer.cs">
+      <DependentUpon>formIdType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formIdTypeProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formIdTypeProcess.Designer.cs">
+      <DependentUpon>formIdTypeProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formReportAuction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formReportAuction.Designer.cs">
+      <DependentUpon>formReportAuction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formReportInLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formReportInLedger.Designer.cs">
+      <DependentUpon>formReportInLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formReportOutLedger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formReportOutLedger.Designer.cs">
+      <DependentUpon>formReportOutLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formServiceCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formServiceCharge.Designer.cs">
+      <DependentUpon>formServiceCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formSettings.Designer.cs">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formItemType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formItemType.Designer.cs">
+      <DependentUpon>formItemType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formItemTypeProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formItemTypeProcess.Designer.cs">
+      <DependentUpon>formItemTypeProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formTicketType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formTicketType.Designer.cs">
+      <DependentUpon>formTicketType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formTicketTypeProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formTicketTypeProcess.Designer.cs">
+      <DependentUpon>formTicketTypeProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formTransaction.Designer.cs">
+      <DependentUpon>formTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formTransactionProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formTransactionProcess.Designer.cs">
+      <DependentUpon>formTransactionProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formReportTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formReportTransaction.Designer.cs">
+      <DependentUpon>formReportTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formUser.Designer.cs">
+      <DependentUpon>formUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formUserProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formUserProcess.Designer.cs">
+      <DependentUpon>formUserProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formUserType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formUserType.Designer.cs">
+      <DependentUpon>formUserType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formUserTypeProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formUserTypeProcess.Designer.cs">
+      <DependentUpon>formUserTypeProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\Camera.cs" />
+    <Compile Include="Methods\ComputationHelper.cs" />
+    <Compile Include="Methods\Helper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Dataset\datasetAuctionReport.cs">
+      <DependentUpon>datasetAuctionReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetAuctionReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetAuctionReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetInLedger.cs">
+      <DependentUpon>datasetInLedger.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetInLedger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetInLedger.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetOutLedger.cs">
+      <DependentUpon>datasetOutLedger.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetOutLedger.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetOutLedger.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetTransactionReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetTransactionReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report\auctionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>auctionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\inLedgerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inLedgerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\outLedgerReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>outLedgerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\pawnTicket.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pawnTicket.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\transactionReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>transactionReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Forms\formAuctionDate.resx">
+      <DependentUpon>formAuctionDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formAuctionDateProcess.resx">
+      <DependentUpon>formAuctionDateProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formCamera.resx">
+      <DependentUpon>formCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formClient.resx">
+      <DependentUpon>formClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formClientProcess.resx">
+      <DependentUpon>formClientProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formIdType.resx">
+      <DependentUpon>formIdType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formIdTypeProcess.resx">
+      <DependentUpon>formIdTypeProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formReportAuction.resx">
+      <DependentUpon>formReportAuction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formReportInLedger.resx">
+      <DependentUpon>formReportInLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formReportOutLedger.resx">
+      <DependentUpon>formReportOutLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formServiceCharge.resx">
+      <DependentUpon>formServiceCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formSettings.resx">
+      <DependentUpon>formSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formItemType.resx">
+      <DependentUpon>formItemType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formItemTypeProcess.resx">
+      <DependentUpon>formItemTypeProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formTicketType.resx">
+      <DependentUpon>formTicketType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formTicketTypeProcess.resx">
+      <DependentUpon>formTicketTypeProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formTransaction.resx">
+      <DependentUpon>formTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formTransactionProcess.resx">
+      <DependentUpon>formTransactionProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formReportTransaction.resx">
+      <DependentUpon>formReportTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formUser.resx">
+      <DependentUpon>formUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formUserProcess.resx">
+      <DependentUpon>formUserProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formUserType.resx">
+      <DependentUpon>formUserType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formUserTypeProcess.resx">
+      <DependentUpon>formUserTypeProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Report\auctionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>auctionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\inLedgerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>inLedgerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\outLedgerReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>outLedgerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\pawnTicket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>pawnTicket.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\transactionReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>transactionReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\ReportSub\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Dataset\datasetAuctionReport.xsc">
+      <DependentUpon>datasetAuctionReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetAuctionReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetAuctionReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Dataset\datasetAuctionReport.xss">
+      <DependentUpon>datasetAuctionReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetInLedger.xsc">
+      <DependentUpon>datasetInLedger.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetInLedger.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetInLedger.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Dataset\datasetInLedger.xss">
+      <DependentUpon>datasetInLedger.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetOutLedger.xsc">
+      <DependentUpon>datasetOutLedger.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetOutLedger.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetOutLedger.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Dataset\datasetOutLedger.xss">
+      <DependentUpon>datasetOutLedger.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetTransactionReport.xsc">
+      <DependentUpon>datasetTransactionReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetTransactionReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetTransactionReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Dataset\datasetTransactionReport.xss">
+      <DependentUpon>datasetTransactionReport.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Document Blank.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document Write.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PawnSystem.BLL.Model\PawnSystem.BLL.Model.csproj">
+      <Project>{dc65e9c6-0771-4ec7-8101-1f9adc97c9aa}</Project>
+      <Name>PawnSystem.BLL.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.BLL.Service\PawnSystem.BLL.Service.csproj">
+      <Project>{b0062c06-38c3-4a70-ad78-5aee3ca570fa}</Project>
+      <Name>PawnSystem.BLL.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clients.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock Lock-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coinstack.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Client 2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document Chart-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrator.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coinstack1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Turn Off-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Mimetypes-x-office-contact.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Client Images\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image PNG-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contract.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Refresh-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Reload-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit Document-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coin-01.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Coinstack.ico" />
+    <None Include="Resources\Zoom-01.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
