@@ -15,16 +15,17 @@ namespace PawnSystem.UI.Backend.Forms
     public partial class formReportInLedger : Form
     {
         private ReportService reportService;
-        
+        private TicketTypeService ticketTypeService;
         public formReportInLedger()
         {
             reportService = new ReportService();
+            ticketTypeService = new TicketTypeService();
             InitializeComponent();
         }
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            List<InLedgerModel> source = reportService.GenerateInLedger(dateFrom.Value, dateTo.Value).ToList();
+            List<InLedgerModel> source = reportService.GenerateInLedger(Convert.ToInt32(comboTicketType.SelectedValue), dateFrom.Value, dateTo.Value).ToList();
 
             if(source.Count > 0)
             {
@@ -43,6 +44,18 @@ namespace PawnSystem.UI.Backend.Forms
         private void formReportInLedger_Load(object sender, EventArgs e)
         {
             dateFrom.Value = dateTo.Value.AddDays(-1);
+            List<TicketTypeModel> ticketTypes = ticketTypeService.Get().ToList();
+
+            ticketTypes.Insert(0, new TicketTypeModel()
+            {
+                ID = 0,
+                Type = "All"
+            });
+
+            comboTicketType.DisplayMember = "Type";
+            comboTicketType.ValueMember = "ID";
+            comboTicketType.DataSource = ticketTypes;
+            comboTicketType.Text = "Select Ticket Type";
         }
     }
 }

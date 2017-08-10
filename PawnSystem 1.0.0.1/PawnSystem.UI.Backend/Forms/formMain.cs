@@ -171,14 +171,6 @@ namespace PawnSystem.UI.Backend.Forms
             }
         }
 
-        private void transactionToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            CloseAllForms(this);
-            formReportTransaction form = new formReportTransaction();
-            form.MdiParent = this;
-            form.Show();
-        }
-
         private void outLedgerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CloseAllForms(this);

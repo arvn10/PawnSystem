@@ -37,6 +37,8 @@
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.inLedgerReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.inLedgerReport = new PawnSystem.UI.Backend.Reports.Report.inLedgerReport();
+            this.comboTicketType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +46,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.Controls.Add(this.comboTicketType);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.buttonGenerate);
             this.groupBox1.Controls.Add(this.dateTo);
             this.groupBox1.Controls.Add(this.label2);
@@ -52,15 +56,15 @@
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(169, 633);
+            this.groupBox1.Size = new System.Drawing.Size(225, 633);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(9, 125);
+            this.buttonGenerate.Location = new System.Drawing.Point(9, 175);
             this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(148, 26);
+            this.buttonGenerate.Size = new System.Drawing.Size(210, 32);
             this.buttonGenerate.TabIndex = 5;
             this.buttonGenerate.Text = "Generate";
             this.buttonGenerate.UseVisualStyleBackColor = true;
@@ -71,7 +75,7 @@
             this.dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTo.Location = new System.Drawing.Point(9, 93);
             this.dateTo.Name = "dateTo";
-            this.dateTo.Size = new System.Drawing.Size(148, 26);
+            this.dateTo.Size = new System.Drawing.Size(210, 26);
             this.dateTo.TabIndex = 4;
             // 
             // label2
@@ -97,7 +101,7 @@
             this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateFrom.Location = new System.Drawing.Point(9, 43);
             this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(148, 26);
+            this.dateFrom.Size = new System.Drawing.Size(210, 26);
             this.dateFrom.TabIndex = 0;
             // 
             // inLedgerReportViewer
@@ -109,11 +113,28 @@
             this.inLedgerReportViewer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.inLedgerReportViewer.Cursor = System.Windows.Forms.Cursors.Default;
             this.inLedgerReportViewer.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inLedgerReportViewer.Location = new System.Drawing.Point(187, 12);
+            this.inLedgerReportViewer.Location = new System.Drawing.Point(243, 12);
             this.inLedgerReportViewer.Name = "inLedgerReportViewer";
-            this.inLedgerReportViewer.Size = new System.Drawing.Size(882, 633);
+            this.inLedgerReportViewer.Size = new System.Drawing.Size(826, 633);
             this.inLedgerReportViewer.TabIndex = 2;
             this.inLedgerReportViewer.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // comboTicketType
+            // 
+            this.comboTicketType.FormattingEnabled = true;
+            this.comboTicketType.Location = new System.Drawing.Point(9, 143);
+            this.comboTicketType.Name = "comboTicketType";
+            this.comboTicketType.Size = new System.Drawing.Size(210, 26);
+            this.comboTicketType.TabIndex = 10;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Ticket Type :";
             // 
             // formReportInLedger
             // 
@@ -147,5 +168,7 @@
         private System.Windows.Forms.DateTimePicker dateFrom;
         private CrystalDecisions.Windows.Forms.CrystalReportViewer inLedgerReportViewer;
         private Reports.Report.inLedgerReport inLedgerReport;
+        private System.Windows.Forms.ComboBox comboTicketType;
+        private System.Windows.Forms.Label label3;
     }
 }

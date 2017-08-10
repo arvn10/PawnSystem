@@ -209,12 +209,6 @@
     <Compile Include="Forms\formTransactionProcess.Designer.cs">
       <DependentUpon>formTransactionProcess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\formReportTransaction.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\formReportTransaction.Designer.cs">
-      <DependentUpon>formReportTransaction.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\formUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +277,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>inLedgerReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\noticeEnvelope.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>noticeEnvelope.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\noticeLetter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>noticeLetter.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Report\outLedgerReport.cs">
@@ -363,9 +369,6 @@
     <EmbeddedResource Include="Forms\formTransactionProcess.resx">
       <DependentUpon>formTransactionProcess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\formReportTransaction.resx">
-      <DependentUpon>formReportTransaction.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\formUser.resx">
       <DependentUpon>formUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +398,14 @@
     <EmbeddedResource Include="Reports\Report\inLedgerReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>inLedgerReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\noticeEnvelope.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>noticeEnvelope.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\noticeLetter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>noticeLetter.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report\outLedgerReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

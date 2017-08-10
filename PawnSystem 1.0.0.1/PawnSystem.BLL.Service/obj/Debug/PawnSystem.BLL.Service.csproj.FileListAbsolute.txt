@@ -69,3 +69,16 @@ C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Service\bin\Debug
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.csprojResolveAssemblyReference.cache
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.dll
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.BLL.Service.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.BLL.Service.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.BLL.IService.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.BLL.Model.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.DAL.Core.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.DAL.Data.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.BLL.IService.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.BLL.Model.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.DAL.Core.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.DAL.Data.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.csprojResolveAssemblyReference.cache
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.pdb

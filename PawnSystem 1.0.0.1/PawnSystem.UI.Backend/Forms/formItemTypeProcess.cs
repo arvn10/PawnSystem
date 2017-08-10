@@ -17,14 +17,12 @@ namespace PawnSystem.UI.Backend.Forms
     {
         private ItemTypeModel model;
         private ItemTypeService service;
-        private Helper helper;
         public UserModel activeUser;
         public int itemTypeID;
         public string processType;
         public formItemTypeProcess()
         {
             InitializeComponent();
-            helper = new Helper();
         }
        
 
@@ -184,7 +182,7 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void textItemName_Leave(object sender, EventArgs e)
         {
-            textItemName.Text = helper.toProperCase(textItemName.Text);
+            textItemName.Text = Helper.toProperCase(textItemName.Text);
         }
     }
 }

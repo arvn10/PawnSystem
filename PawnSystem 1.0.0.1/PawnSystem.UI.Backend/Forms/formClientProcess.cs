@@ -21,11 +21,9 @@ namespace PawnSystem.UI.Backend.Forms
         public UserModel activeUser = new UserModel();
         public int clientID;
         public string processType;
-        private Helper helper;
         public formClientProcess()
         {
             InitializeComponent();
-            helper = new Helper();
         }
 
 
@@ -246,17 +244,17 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void textFirstname_Leave(object sender, EventArgs e)
         {
-            textFirstname.Text = helper.toProperCase(textFirstname.Text);
+            textFirstname.Text = Helper.toProperCase(textFirstname.Text);
         }
 
         private void textLastname_Leave(object sender, EventArgs e)
         {
-            textLastname.Text = helper.toProperCase(textLastname.Text);
+            textLastname.Text = Helper.toProperCase(textLastname.Text);
         }
 
         private void textAddress_Leave(object sender, EventArgs e)
         {
-            textAddress.Text = helper.toProperCase(textAddress.Text);
+            textAddress.Text = Helper.toProperCase(textAddress.Text);
         }
 
         private void textContactNumber_KeyPress(object sender, KeyPressEventArgs e)

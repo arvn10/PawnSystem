@@ -24,3 +24,10 @@ C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Model\bin\Debug\P
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.csprojResolveAssemblyReference.cache
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.dll
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\bin\Debug\PawnSystem.BLL.Model.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\bin\Debug\PawnSystem.BLL.Model.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\bin\Debug\PawnSystem.DAL.Data.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\bin\Debug\PawnSystem.DAL.Data.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.csprojResolveAssemblyReference.cache
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.pdb

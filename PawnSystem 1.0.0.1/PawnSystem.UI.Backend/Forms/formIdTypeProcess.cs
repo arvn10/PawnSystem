@@ -19,7 +19,6 @@ namespace PawnSystem.UI.Backend.Forms
         private IdTypeService service;
 
         private IdTypeModel model;
-        private Helper helper;
         public int idTypeID;
         public UserModel activeUser;
         public string processType;
@@ -27,7 +26,6 @@ namespace PawnSystem.UI.Backend.Forms
         public formIdTypeProcess()
         {
             InitializeComponent();
-            helper = new Helper();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -100,7 +98,7 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void textIdType_Leave(object sender, EventArgs e)
         {
-            textIdType.Text = helper.toProperCase(textIdType.Text);
+            textIdType.Text = Helper.toProperCase(textIdType.Text);
         }
     }
 }

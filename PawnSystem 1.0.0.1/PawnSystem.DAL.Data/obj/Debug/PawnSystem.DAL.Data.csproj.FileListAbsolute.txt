@@ -21,3 +21,7 @@ C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Data\bin\Debug\Pa
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Data\bin\Debug\PawnSystem.DAL.Data.pdb
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.dll
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\bin\Debug\PawnSystem.DAL.Data.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\bin\Debug\PawnSystem.DAL.Data.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.pdb

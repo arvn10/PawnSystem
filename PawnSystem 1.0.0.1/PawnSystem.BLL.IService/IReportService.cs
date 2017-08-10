@@ -8,10 +8,10 @@ namespace PawnSystem.BLL.IService
 {
     public interface IReportService
     {
-        List<OutLedgerModel> GenerateOutLedger(DateTime from, DateTime to);
+        List<OutLedgerModel> GenerateOutLedger(int ticketTypeID, DateTime from, DateTime to);
 
-        List<InLedgerModel> GenerateInLedger(DateTime from, DateTime to);
+        List<InLedgerModel> GenerateInLedger(int ticketTypeID, DateTime from, DateTime to);
 
-        List<AuctionModel> GenerateAuctionReport(AuctionDateModel param);
+        List<AuctionModel> GenerateAuctionReport(int ticketTypeID, AuctionDateModel param);
     }
 }

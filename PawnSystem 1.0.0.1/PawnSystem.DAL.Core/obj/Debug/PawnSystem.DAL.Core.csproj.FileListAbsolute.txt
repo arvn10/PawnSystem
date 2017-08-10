@@ -58,3 +58,15 @@ C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Core\bin\Debug\En
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csprojResolveAssemblyReference.cache
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.dll
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\PawnSystem.DAL.Core.dll.config
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\PawnSystem.DAL.Core.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\PawnSystem.DAL.Core.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\EntityFramework.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\PawnSystem.DAL.Data.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\PawnSystem.DAL.Data.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\EntityFramework.xml
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csprojResolveAssemblyReference.cache
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.pdb

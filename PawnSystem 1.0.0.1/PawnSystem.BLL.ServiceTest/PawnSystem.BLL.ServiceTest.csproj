@@ -77,6 +77,10 @@
       <Project>{b0062c06-38c3-4a70-ad78-5aee3ca570fa}</Project>
       <Name>PawnSystem.BLL.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.UI.Backend\PawnSystem.UI.Backend.csproj">
+      <Project>{70d41d94-aa7a-486e-9154-a951a35bd9ba}</Project>
+      <Name>PawnSystem.UI.Backend</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

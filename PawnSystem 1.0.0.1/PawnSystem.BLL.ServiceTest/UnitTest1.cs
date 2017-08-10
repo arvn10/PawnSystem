@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PawnSystem.BLL.Model;
 using PawnSystem.BLL.Service;
 using System.Collections.Generic;
-
+using PawnSystem.UI.Backend.Methods;
 namespace PawnSystem.BLL.ServiceTest
 {
     [TestClass]
@@ -64,7 +64,7 @@ namespace PawnSystem.BLL.ServiceTest
         {
             ReportService service = new ReportService();
             DateTime d = new DateTime(2017, 6, 3);
-            List<OutLedgerModel>list = service.GenerateOutLedger(d, d.AddDays(1));
+            List<OutLedgerModel>list = service.GenerateOutLedger(1,d, d.AddDays(1));
             Console.WriteLine(list);
         }
         [TestMethod]
@@ -73,7 +73,13 @@ namespace PawnSystem.BLL.ServiceTest
             ReportService service = new ReportService();
             DateTime from = new DateTime(2017, 6, 1);
             DateTime to = new DateTime(2017, 6, 30);
-            service.GenerateInLedger(from, to);
+            service.GenerateInLedger(1,from, to);
+        }
+
+        [TestMethod]
+        public void NumberToWords()
+        {
+            Console.WriteLine(Helper.NumWordsWrapper(1920491));
         }
     }
 }

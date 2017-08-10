@@ -16,14 +16,12 @@ namespace PawnSystem.UI.Backend.Forms
     {
         private UserService service;
         private UserModel model;
-        private Helper helper;
         public UserModel activeUser;
         public int userID;
         public string processType;
         public formUserProcess()
         {
             InitializeComponent();
-            helper = new Helper();
         }
 
         private void formUserProcess_Load(object sender, EventArgs e)
@@ -166,12 +164,12 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void textFirstname_Leave(object sender, EventArgs e)
         {
-            textFirstname.Text = helper.toProperCase(textFirstname.Text);
+            textFirstname.Text = Helper.toProperCase(textFirstname.Text);
         }
 
         private void textLastname_Leave(object sender, EventArgs e)
         {
-            textLastname.Text = helper.toProperCase(textLastname.Text);
+            textLastname.Text = Helper.toProperCase(textLastname.Text);
         }
     }
 }

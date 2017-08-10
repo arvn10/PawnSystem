@@ -48,18 +48,4 @@ namespace PawnSystem.BLL.Model
         public string penalty { get; set; }
         public string netProceed { get; set; }
     }
-
-    public class TransactionReportModel
-    {
-        public int clientID { get; set; }
-        public string date { get; set; }
-        public string pawnTicketNumber { get; set; }
-        public string clientName { get; set; }
-        public string itemDescription { get; set; }
-        public string principal { get; set; }
-        public string interest { get; set; }
-        public string penalty { get; set; }
-        public string netProceed { get; set; }
-        public string status { get; set; }
-    }
 }

@@ -16,16 +16,31 @@ namespace PawnSystem.BLL.Service
             transactionService = new TransactionService();
             transactionItemService = new TransactionItemService();
         }
-        public List<OutLedgerModel> GenerateOutLedger(DateTime from, DateTime to)
+        public List<OutLedgerModel> GenerateOutLedger(int ticketTypeID, DateTime from, DateTime to)
         {
             List<TransactionView> transactions = new List<TransactionView>();
             List<OutLedgerModel> outLedgerRaw = new List<OutLedgerModel>();
-            transactions = transactionService.Get().Where(x => x.DateLoan >= from &&
-                                                              x.DateLoan <= to &&
-                                                              x.Status != "Closed" &&
-                                                              (x.TransactionType == "Renew" ||
-                                                               x.TransactionType == "Pawn"))
-                                                  .ToList();
+            if(ticketTypeID == 0)
+            {
+                transactions = transactionService.Get().Where(x =>
+                                                                  x.DateLoan >= from &&
+                                                                  x.DateLoan <= to &&
+                                                                  x.Status != "Closed" &&
+                                                                  (x.TransactionType == "Renew" ||
+                                                                   x.TransactionType == "Pawn"))
+                                                      .ToList();
+            }
+            else
+            {
+                transactions = transactionService.Get().Where(x => x.TicketTypeID == ticketTypeID &&
+                                                  x.DateLoan >= from &&
+                                                  x.DateLoan <= to &&
+                                                  x.Status != "Closed" &&
+                                                  (x.TransactionType == "Renew" ||
+                                                   x.TransactionType == "Pawn"))
+                                      .ToList();
+            }
+
 
             foreach (TransactionView transaction in transactions)
             {
@@ -58,14 +73,29 @@ namespace PawnSystem.BLL.Service
 
             return outLedgerRaw;
         }
-        public List<InLedgerModel> GenerateInLedger(DateTime from, DateTime to)
+        public List<InLedgerModel> GenerateInLedger(int ticketTypeID, DateTime from, DateTime to)
         {
-            List<TransactionView> transactionList = transactionService.Get()
-                                                        .Where(x => x.DateLoan >= from &&
+            List<TransactionView> transactionList = new List<TransactionView>();
+            if(ticketTypeID == 0)
+            {
+                transactionList = transactionService.Get()
+                                                        .Where(x => 
+                                                                    x.DateLoan >= from &&
                                                                     x.DateLoan <= to &&
                                                                     x.Status == "Closed" &&
                                                                     x.TransactionType == "Redeem")
                                                         .ToList();
+            }
+            else
+            {
+                transactionList = transactionService.Get()
+                                                        .Where(x => x.TicketTypeID == ticketTypeID &&
+                                                                    x.DateLoan >= from &&
+                                                                    x.DateLoan <= to &&
+                                                                    x.Status == "Closed" &&
+                                                                    x.TransactionType == "Redeem")
+                                                        .ToList();
+            }
 
             List<InLedgerModel> inLedgerList = new List<InLedgerModel>();
 
@@ -141,14 +171,29 @@ namespace PawnSystem.BLL.Service
 
             return inLedgerList;
         }
-        public List<AuctionModel> GenerateAuctionReport(AuctionDateModel param)
+        public List<AuctionModel> GenerateAuctionReport(int ticketTypeID, AuctionDateModel param)
         {
-            List<TransactionView> transactionList = transactionService.Get()
+            List<TransactionView> transactionList = new List<TransactionView>();
+            if (ticketTypeID == 0)
+            {
+                transactionList = transactionService.Get()
                                             .Where(x => x.AuctionDateID == param.ID &&
                                                         x.Status == "Expired")
                                             .OrderBy(x => x.DateLoan)
                                             .ThenBy(x => x.ClientID)
                                             .ToList();
+            }
+            else
+            {
+                transactionList = transactionService.Get()
+                                            .Where(x => x.AuctionDateID == param.ID &&
+                                                        x.TicketTypeID == ticketTypeID &&
+                                                        x.Status == "Expired")
+                                            .OrderBy(x => x.DateLoan)
+                                            .ThenBy(x => x.ClientID)
+                                            .ToList();
+            }
+
             List<AuctionModel> auctionList = new List<AuctionModel>();
             if (transactionList.Count > 0)
             {
@@ -217,97 +262,6 @@ namespace PawnSystem.BLL.Service
 
             }
             return auctionList;
-        }
-
-        public List<TransactionReportModel> GenerateTransactionReport(AuctionDateModel param, DateTime from, DateTime to, int ticketTypeID, string status)
-        {
-            List<TransactionView> transactionList = new List<TransactionView>();
-
-            if (ticketTypeID == 0 && status != "All")
-            {
-                transactionList = transactionService.Get()
-                                                .Where(x => x.DateLoan >= from &&
-                                                            x.DateLoan <= to &&
-                                                            x.Status == status)
-                                                .OrderBy(x => x.DateLoan)
-                                                .ThenBy(x => x.ClientID)
-                                                .ToList();
-            }
-            else if (ticketTypeID == 0 && status == "All")
-            {
-                transactionList = transactionService.Get()
-                                                .Where(x => x.DateLoan >= from &&
-                                                            x.DateLoan <= to)
-                                                .OrderBy(x => x.DateLoan)
-                                                .ThenBy(x => x.ClientID)
-                                                .ToList();
-            }
-            else if (ticketTypeID > 0 && status != "All")
-            {
-                transactionList = transactionService.Get()
-                                                .Where(x => x.DateLoan >= from &&
-                                                            x.DateLoan <= to &&
-                                                            x.TicketTypeID == ticketTypeID &&
-                                                            x.Status == status)
-                                                .OrderBy(x => x.DateLoan)
-                                                .ThenBy(x => x.ClientID)
-                                                .ToList();
-            }
-            else if (ticketTypeID > 0 && status == "All")
-            {
-                transactionList = transactionService.Get()
-                                                .Where(x => x.DateLoan >= from &&
-                                                            x.DateLoan <= to &&
-                                                            x.TicketTypeID == ticketTypeID)
-                                                .OrderBy(x => x.DateLoan)
-                                                .ThenBy(x => x.ClientID)
-                                                .ToList();
-            }
-
-            List<TransactionReportModel> transactionReportList = new List<TransactionReportModel>();
-            if (transactionList.Count > 0)
-            {
-                transactionService.UpdateTransactionStatusAuction(param.ID);
-            }
-            foreach (TransactionView transaction in transactionList)
-            {
-                int index = 0;
-                List<TransactionItemModel> transactionItems = transactionItemService.Get().Where(x => x.TransactionID == transaction.ID).ToList();
-                foreach (TransactionItemModel item in transactionItems)
-                {
-                    TransactionReportModel tReport = new TransactionReportModel();
-                    if (index > 0)
-                    {
-                        tReport.date = "";
-                        tReport.pawnTicketNumber = "";
-                        tReport.clientName = "";
-                        tReport.principal = "";
-                        tReport.interest = "";
-                        tReport.penalty = "";
-                        tReport.netProceed = "";
-                    }
-                    else
-                    {
-                        double principal = transaction.Principal;
-
-                        tReport.clientID = transaction.ClientID;
-                        tReport.date = transaction.DateLoan.ToShortDateString();
-                        tReport.pawnTicketNumber = transaction.PawnTicketNumber;
-                        tReport.clientName = transaction.ClientFullName;
-                        tReport.principal = principal.ToString("F", CultureInfo.InvariantCulture);
-                        tReport.interest = transaction.Interest.ToString("F", CultureInfo.InvariantCulture);
-                        tReport.penalty = transaction.Penalty.ToString("F", CultureInfo.InvariantCulture);
-                        tReport.netProceed = transaction.NetProceed.ToString("F", CultureInfo.InvariantCulture);
-                    }
-                    tReport.itemDescription = item.Description;
-                    tReport.status = transaction.Status;
-
-                    transactionReportList.Add(tReport);
-                    index++;
-                }
-
-            }
-            return transactionReportList;
         }
     }
 }

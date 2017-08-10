@@ -39,7 +39,8 @@
             this.outLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auctionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.penaltyNoticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transactionToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.letterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.envelopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStraipConfiguration = new System.Windows.Forms.ToolStripDropDownButton();
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,8 +49,6 @@
             this.ticketTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iDTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.serviceChargeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.letterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.envelopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,7 +111,6 @@
             this.inLedgerToolStripMenuItem,
             this.outLedgerToolStripMenuItem,
             this.auctionReportToolStripMenuItem,
-            this.transactionToolStripMenuItem1,
             this.penaltyNoticeToolStripMenuItem});
             this.toolStripReport.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Chart_01;
             this.toolStripReport.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -150,12 +148,17 @@
             this.penaltyNoticeToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
             this.penaltyNoticeToolStripMenuItem.Text = "Penalty Notice";
             // 
-            // transactionToolStripMenuItem1
+            // letterToolStripMenuItem
             // 
-            this.transactionToolStripMenuItem1.Name = "transactionToolStripMenuItem1";
-            this.transactionToolStripMenuItem1.Size = new System.Drawing.Size(190, 26);
-            this.transactionToolStripMenuItem1.Text = "Transaction";
-            this.transactionToolStripMenuItem1.Click += new System.EventHandler(this.transactionToolStripMenuItem1_Click);
+            this.letterToolStripMenuItem.Name = "letterToolStripMenuItem";
+            this.letterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.letterToolStripMenuItem.Text = "Letter";
+            // 
+            // envelopeToolStripMenuItem
+            // 
+            this.envelopeToolStripMenuItem.Name = "envelopeToolStripMenuItem";
+            this.envelopeToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.envelopeToolStripMenuItem.Text = "Envelope";
             // 
             // toolStraipConfiguration
             // 
@@ -224,18 +227,6 @@
             this.serviceChargeToolStripMenuItem.Text = "Service Charge";
             this.serviceChargeToolStripMenuItem.Click += new System.EventHandler(this.serviceChargeToolStripMenuItem_Click);
             // 
-            // letterToolStripMenuItem
-            // 
-            this.letterToolStripMenuItem.Name = "letterToolStripMenuItem";
-            this.letterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.letterToolStripMenuItem.Text = "Letter";
-            // 
-            // envelopeToolStripMenuItem
-            // 
-            this.envelopeToolStripMenuItem.Name = "envelopeToolStripMenuItem";
-            this.envelopeToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.envelopeToolStripMenuItem.Text = "Envelope";
-            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -281,7 +272,6 @@
         private System.Windows.Forms.ToolStripMenuItem auctionReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem penaltyNoticeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceChargeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem letterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem envelopeToolStripMenuItem;
     }
