@@ -4,13 +4,14 @@ using System.Linq;
 using PawnSystem.BLL.IService;
 using PawnSystem.BLL.Model;
 using System.Globalization;
-
+using PawnSystem.Helper;
 namespace PawnSystem.BLL.Service
 {
     public class ReportService : IReportService
     {
         TransactionService transactionService;
         TransactionItemService transactionItemService;
+        HelperClass helper = new HelperClass();
         public ReportService()
         {
             transactionService = new TransactionService();
@@ -18,34 +19,38 @@ namespace PawnSystem.BLL.Service
         }
         public List<OutLedgerModel> GenerateOutLedger(int ticketTypeID, DateTime from, DateTime to)
         {
+            from = new DateTime(from.Year, from.Month, from.Day);
+            to = new DateTime(to.Year, to.Month, to.Day);
             List<TransactionView> transactions = new List<TransactionView>();
             List<OutLedgerModel> outLedgerRaw = new List<OutLedgerModel>();
-            if(ticketTypeID == 0)
+            if (ticketTypeID == 0)
             {
                 transactions = transactionService.Get().Where(x =>
-                                                                  x.DateLoan >= from &&
-                                                                  x.DateLoan <= to &&
-                                                                  x.Status != "Closed" &&
-                                                                  (x.TransactionType == "Renew" ||
-                                                                   x.TransactionType == "Pawn"))
+                                                              x.DateLoan >= from &&
+                                                              x.DateLoan <= to &&
+                                                              x.Status != "Closed" &&
+                                                             (x.TransactionType == "Renew" ||
+                                                              x.TransactionType == "Pawn"))
+                                                      .OrderBy(x => x.PawnTicketNumber)
                                                       .ToList();
             }
             else
             {
                 transactions = transactionService.Get().Where(x => x.TicketTypeID == ticketTypeID &&
-                                                  x.DateLoan >= from &&
-                                                  x.DateLoan <= to &&
-                                                  x.Status != "Closed" &&
-                                                  (x.TransactionType == "Renew" ||
-                                                   x.TransactionType == "Pawn"))
-                                      .ToList();
+                                                              x.DateLoan >= from &&
+                                                              x.DateLoan <= to &&
+                                                              x.Status != "Closed" &&
+                                                             (x.TransactionType == "Renew" ||
+                                                              x.TransactionType == "Pawn"))
+                                                      .OrderBy(x => x.PawnTicketNumber)
+                                                      .ToList();
             }
 
 
             foreach (TransactionView transaction in transactions)
             {
                 OutLedgerModel data = new OutLedgerModel();
-                data.date = transaction.DateLoan;
+                data.date = transaction.DateLoan.ToString("yyyy-MM-dd");
                 data.transactionType = transaction.TransactionType;
                 data.itemType = transaction.ItemTypeDescription;
                 data.pawnTicketNumber = transaction.PawnTicketNumber;
@@ -75,105 +80,117 @@ namespace PawnSystem.BLL.Service
         }
         public List<InLedgerModel> GenerateInLedger(int ticketTypeID, DateTime from, DateTime to)
         {
+            from = new DateTime(from.Year, from.Month, from.Day);
+            to = new DateTime(to.Year, to.Month, to.Day);
             List<TransactionView> transactionList = new List<TransactionView>();
-            if(ticketTypeID == 0)
+            if (ticketTypeID == 0)
             {
                 transactionList = transactionService.Get()
-                                                        .Where(x => 
-                                                                    x.DateLoan >= from &&
-                                                                    x.DateLoan <= to &&
-                                                                    x.Status == "Closed" &&
-                                                                    x.TransactionType == "Redeem")
+                                                        .Where(x =>
+                                                               x.DateClosed >= from &&
+                                                               x.DateClosed <= to &&
+                                                               x.Status == "Closed")
+                                                        .OrderBy(x => x.PawnTicketNumber)
+                                                        .ThenBy(x => x.DateClosed)
                                                         .ToList();
             }
             else
             {
                 transactionList = transactionService.Get()
-                                                        .Where(x => x.TicketTypeID == ticketTypeID &&
-                                                                    x.DateLoan >= from &&
-                                                                    x.DateLoan <= to &&
-                                                                    x.Status == "Closed" &&
-                                                                    x.TransactionType == "Redeem")
+                                                        .Where(x =>
+                                                               x.TicketTypeID == ticketTypeID &&
+                                                               x.DateClosed >= from &&
+                                                               x.DateClosed <= to &&
+                                                               x.Status == "Closed")
+                                                        .OrderBy(x => x.PawnTicketNumber)
+                                                        .ThenBy(x => x.DateClosed)
                                                         .ToList();
             }
 
             List<InLedgerModel> inLedgerList = new List<InLedgerModel>();
 
-            foreach (TransactionView transaction in transactionList)
+            foreach (TransactionView transaction in transactionList.ToList())
             {
+
+
                 InLedgerModel inLedger = new InLedgerModel();
-
-                inLedger.date = transaction.DateLoan;
-                inLedger.transactionType = transaction.TransactionType;
-                inLedger.clientName = transaction.ClientFullName;
-                inLedger.pawnTicketNumber = transaction.PawnTicketNumber;
-                inLedger.principal = transaction.Principal;
-                int daysInterest = 0;
-                int daysPenalty = 0;
-                int pMonth = 0;
-                int pDay = 0;
-                for (DateTime index = transaction.DateLoan; index < transaction.DateClosed; index = index.AddDays(1))
+                TransactionView oldTransactionView = transactionList.Where(x => x.OldID == transaction.ID &&
+                                                                           x.DateClosed == transaction.DateClosed)
+                                                                    .FirstOrDefault();
+                if (oldTransactionView == null)
                 {
-                    if (index.DayOfWeek != DayOfWeek.Sunday)
+                    inLedger.transactionType = transaction.TransactionType == "Pawn" ? "Renew" : transaction.TransactionType;
+                    inLedger.date = Convert.ToDateTime(transaction.DateClosed).ToString("yyyy-MM-dd");
+                    inLedger.clientName = transaction.ClientFullName;
+                    inLedger.pawnTicketNumber = transaction.PawnTicketNumber;
+                    inLedger.principal = transaction.Principal;
+                    int daysInterest = 0;
+                    int daysPenalty = 0;
+                    int pMonth = 0;
+                    int pDay = 0;
+                    for (DateTime index = transaction.DateLoan; index < transaction.DateClosed; index = index.AddDays(1))
                     {
-                        daysInterest++;
+                        if (index.DayOfWeek != DayOfWeek.Sunday)
+                        {
+                            daysInterest++;
+                        }
                     }
-                }
-                for (DateTime index = transaction.DatePenalty; index < transaction.DateClosed; index = index.AddDays(1))
-                {
-                    if (index.DayOfWeek != DayOfWeek.Sunday)
+                    for (DateTime index = transaction.DatePenalty; index < transaction.DateClosed; index = index.AddDays(1))
                     {
-                        daysPenalty++;
+                        if (index.DayOfWeek != DayOfWeek.Sunday)
+                        {
+                            daysPenalty++;
+                        }
                     }
-                }
-                double interest = Math.Round(((double)transaction.Principal / 100) * transaction.ItemTypeInterest, 2);
-                double penalty = Math.Round(((double)transaction.Principal / 100) * transaction.ItemTypePenalty, 2);
-                if (daysInterest > 30)
-                {
-                    inLedger.months = daysInterest / 30;
-                    inLedger.days = daysInterest % 30;
-                    inLedger.amount = Math.Round((interest * (inLedger.months - 1)) + (((double)interest / 30) * inLedger.days), 2);
-                    inLedger.interestAmount = interest;
-                }
-                else
-                {
-                    inLedger.months = 0;
-                    inLedger.days = daysInterest;
-                    inLedger.amount = 0;
-                    inLedger.interestAmount = 0;
-                }
-
-                if (daysPenalty > 30)
-                {
-                    pMonth = daysPenalty / 30;
-                    pDay = daysPenalty % 30;
-                    inLedger.penalty = Math.Round((penalty * pMonth) + (((double)penalty / 30) * pDay), 2);
-                }
-                else
-                {
-                    pMonth = 1;
-                    pDay = daysPenalty;
-                    if (transaction.DateClosed > transaction.DatePenalty)
+                    double interest = Math.Round(((double)transaction.Principal / 100) * transaction.ItemTypeInterest, 2);
+                    double penalty = Math.Round(((double)transaction.Principal / 100) * transaction.ItemTypePenalty, 2);
+                    if (daysInterest > 30)
                     {
+                        inLedger.months = daysInterest / 30;
+                        inLedger.days = daysInterest % 30;
+                        inLedger.amount = Math.Round((interest * (inLedger.months - 1)) + (((double)interest / 30) * inLedger.days), 2);
+                        inLedger.interestAmount = interest;
+                    }
+                    else
+                    {
+                        inLedger.months = 0;
+                        inLedger.days = daysInterest;
+                        inLedger.amount = 0;
+                        inLedger.interestAmount = 0;
+                    }
+
+                    if (daysPenalty > 30)
+                    {
+                        pMonth = daysPenalty / 30;
+                        pDay = daysPenalty % 30;
                         inLedger.penalty = Math.Round((penalty * pMonth) + (((double)penalty / 30) * pDay), 2);
                     }
                     else
                     {
-                        inLedger.penalty = 0.00;
+                        pMonth = 1;
+                        pDay = daysPenalty;
+                        if (transaction.DateClosed > transaction.DatePenalty)
+                        {
+                            inLedger.penalty = Math.Round((penalty * pMonth) + (((double)penalty / 30) * pDay), 2);
+                        }
+                        else
+                        {
+                            inLedger.penalty = 0.00;
+                        }
                     }
+
+                    inLedger.interestPercent = transaction.ItemTypeInterest;
+                    inLedger.netProceed = inLedger.principal + inLedger.amount + inLedger.interestAmount + inLedger.penalty;
+
+                    inLedgerList.Add(inLedger);
                 }
-
-                inLedger.interestPercent = transaction.ItemTypeInterest;
-                inLedger.netProceed = inLedger.principal + inLedger.amount + inLedger.interestAmount + inLedger.penalty;
-
-                inLedgerList.Add(inLedger);
             }
-
             return inLedgerList;
         }
         public List<AuctionModel> GenerateAuctionReport(int ticketTypeID, AuctionDateModel param)
         {
             List<TransactionView> transactionList = new List<TransactionView>();
+
             if (ticketTypeID == 0)
             {
                 transactionList = transactionService.Get()
@@ -262,6 +279,58 @@ namespace PawnSystem.BLL.Service
 
             }
             return auctionList;
+        }
+        public List<NoticeModel> GenerateNoticeMail(int ticketTypeID, DateTime from, DateTime to)
+        {
+            from = new DateTime(from.Year, from.Month, from.Day);
+            to = new DateTime(to.Year, to.Month, to.Day);
+            List<NoticeModel> noticeList = new List<NoticeModel>();
+            List<TransactionView> transactions = new List<TransactionView>();
+
+            if (ticketTypeID == 0)
+            {
+                transactions = transactionService.Get()
+                                                    .AsQueryable()
+                                                    .Where(x => x.DatePenalty >= from &&
+                                                                x.DatePenalty <= to &&
+                                                                x.Status != "Closed")
+                                                    .OrderBy(x => x.DateLoan)
+                                                    .ThenBy(x => x.ClientID)
+                                                    .ToList();
+            }
+            else
+            {
+                transactions = transactionService.Get()
+                                                    .Where(x => x.DatePenalty >= from &&
+                                                                x.DatePenalty <= to &&
+                                                                x.TicketTypeID == ticketTypeID &&
+                                                                x.Status != "Closed")
+                                                    .OrderBy(x => x.DateLoan)
+                                                    .ThenBy(x => x.ClientID)
+                                                    .ToList();
+            }
+
+            foreach (TransactionView transaction in transactions)
+            {
+                NoticeModel notice = new NoticeModel();
+                notice.ClientName = transaction.ClientFirstName + " " + transaction.ClientLastName;
+                notice.ClientAddress = transaction.ClientAddress;
+                notice.PawnTicketNumber = transaction.PawnTicketNumber;
+                notice.Principal = transaction.Principal.ToString("F", CultureInfo.InvariantCulture);
+                notice.PrincipalText = HelperClass.NumWordsWrapper(transaction.Principal) + " Pesos";
+                notice.dateLoan = transaction.DateLoan.ToString("yyyy-MM-dd");
+                notice.datePenalty = transaction.DatePenalty.ToString("yyyy-MM-dd");
+                notice.dateAuction = transaction.AuctionDate.ToString("MM dd, yyyyy");
+                notice.dateExpiry = transaction.DateExpiry.ToString("MM dd, yyyyy");
+                notice.dateAuctionWord = string.Format("{0:D}", transaction.AuctionDate);
+                notice.monthDay = string.Format("{0:m}", transaction.AuctionDate);
+                notice.year = string.Format("{0:yy}", transaction.AuctionDate);
+                notice.dateLoanReport = transaction.DateLoan.ToString("yyyy-MM-dd");
+                notice.dateExpiryReport = transaction.DateExpiry.ToString("yyyy-MM-dd");
+                notice.dateAuctionReport = transaction.AuctionDate.ToString("yyyy-MM-dd");
+                noticeList.Add(notice);
+            }
+            return noticeList;
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using PawnSystem.BLL.Model;
 using PawnSystem.BLL.Service;
 using PawnSystem.UI.Backend.Methods;
+using PawnSystem.Helper;
 namespace PawnSystem.UI.Backend.Forms
 {
     public partial class formItemTypeProcess : Form
@@ -182,7 +183,7 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void textItemName_Leave(object sender, EventArgs e)
         {
-            textItemName.Text = Helper.toProperCase(textItemName.Text);
+            textItemName.Text = HelperClass.toProperCase(textItemName.Text);
         }
     }
 }

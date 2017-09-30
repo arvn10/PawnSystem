@@ -72,11 +72,7 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.buttonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.buttonPrintPawnTicket = new System.Windows.Forms.ToolStripDropDownButton();
-            this.pawnTicketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.penaltyNoticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.letterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.envelopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonPrintPawnTicket = new System.Windows.Forms.ToolStripButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textTransactionItem = new System.Windows.Forms.TextBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -87,6 +83,7 @@
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.buttonNew = new System.Windows.Forms.ToolStripButton();
             this.buttonEdit = new System.Windows.Forms.ToolStripButton();
+            this.pawnTicket1 = new PawnSystem.UI.Backend.Reports.Report.pawnTicket();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -553,44 +550,16 @@
             // 
             // buttonPrintPawnTicket
             // 
-            this.buttonPrintPawnTicket.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pawnTicketToolStripMenuItem,
-            this.penaltyNoticeToolStripMenuItem});
             this.buttonPrintPawnTicket.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrintPawnTicket.ForeColor = System.Drawing.Color.Black;
             this.buttonPrintPawnTicket.Image = global::PawnSystem.UI.Backend.Properties.Resources.Contract;
             this.buttonPrintPawnTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonPrintPawnTicket.Name = "buttonPrintPawnTicket";
-            this.buttonPrintPawnTicket.Size = new System.Drawing.Size(78, 25);
-            this.buttonPrintPawnTicket.Text = "Print";
+            this.buttonPrintPawnTicket.Size = new System.Drawing.Size(154, 25);
+            this.buttonPrintPawnTicket.Text = "Print Pawn Ticket";
             this.buttonPrintPawnTicket.ToolTipText = "Print Pawn Ticket";
-            // 
-            // pawnTicketToolStripMenuItem
-            // 
-            this.pawnTicketToolStripMenuItem.Name = "pawnTicketToolStripMenuItem";
-            this.pawnTicketToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.pawnTicketToolStripMenuItem.Text = "Pawn Ticket";
-            // 
-            // penaltyNoticeToolStripMenuItem
-            // 
-            this.penaltyNoticeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.letterToolStripMenuItem,
-            this.envelopeToolStripMenuItem});
-            this.penaltyNoticeToolStripMenuItem.Name = "penaltyNoticeToolStripMenuItem";
-            this.penaltyNoticeToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.penaltyNoticeToolStripMenuItem.Text = "Penalty Notice";
-            // 
-            // letterToolStripMenuItem
-            // 
-            this.letterToolStripMenuItem.Name = "letterToolStripMenuItem";
-            this.letterToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.letterToolStripMenuItem.Text = "Letter";
-            // 
-            // envelopeToolStripMenuItem
-            // 
-            this.envelopeToolStripMenuItem.Name = "envelopeToolStripMenuItem";
-            this.envelopeToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
-            this.envelopeToolStripMenuItem.Text = "Envelope";
+            this.buttonPrintPawnTicket.Visible = false;
+            this.buttonPrintPawnTicket.Click += new System.EventHandler(this.buttonPrintPawnTicket_Click);
             // 
             // groupBox4
             // 
@@ -612,7 +581,7 @@
             this.textTransactionItem.Enabled = false;
             this.textTransactionItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTransactionItem.Location = new System.Drawing.Point(6, 87);
-            this.textTransactionItem.MaxLength = 50;
+            this.textTransactionItem.MaxLength = 100;
             this.textTransactionItem.Multiline = true;
             this.textTransactionItem.Name = "textTransactionItem";
             this.textTransactionItem.Size = new System.Drawing.Size(235, 112);
@@ -805,12 +774,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ItemDescription;
         private System.Windows.Forms.Label labelPrincipal;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ToolStripDropDownButton buttonPrintPawnTicket;
-        private System.Windows.Forms.ToolStripMenuItem pawnTicketToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem penaltyNoticeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem letterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem envelopeToolStripMenuItem;
         private System.Windows.Forms.DateTimePicker datePickerClosed;
         private System.Windows.Forms.Label labelDateClosed;
+        private System.Windows.Forms.ToolStripButton buttonPrintPawnTicket;
+        private Reports.Report.pawnTicket pawnTicket1;
     }
 }

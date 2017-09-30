@@ -13,6 +13,9 @@ using PawnSystem.BLL.Service;
 using PawnSystem.BLL.Model;
 using NodaTime;
 using System.Globalization;
+using System.Drawing.Printing;
+using CrystalDecisions.Shared;
+using PawnSystem.Helper;
 namespace PawnSystem.UI.Backend.Forms
 {
     public partial class formTransactionProcess : Form
@@ -59,6 +62,57 @@ namespace PawnSystem.UI.Backend.Forms
             transactionCreateEdit = new TransactionCreateEdit();
             transactionView = new TransactionView();
             computationHelper = new Methods.ComputationHelper();
+        }
+
+        private void PrintPawnTicket()
+        {
+            TransactionView transactionView = transactionService.Get().Where(x => x.ID == transactionID).FirstOrDefault();
+            string oldPawnTicket = string.Empty;
+            if(transactionView.OldID != 0)
+            {
+                TransactionView transactionViewOld = transactionService.Get().Where(x => x.ID == transactionView.OldID).FirstOrDefault();
+                oldPawnTicket = transactionViewOld.PawnTicketNumber;
+            }
+
+            transactionItemService = new TransactionItemService();
+            List<TransactionItemModel> transactionItems = transactionItemService.Get().Where(x => x.TransactionID == transactionID).ToList();
+            string transactionItem = string.Empty;
+            foreach (TransactionItemModel item in transactionItems)
+            {
+                if (transactionItem == string.Empty)
+                {
+                    transactionItem = item.Description;
+                }
+                else
+                {
+                    transactionItem = transactionItem + ", " + item.Description;
+                }
+            }
+            
+            PrinterSettings printerSetting = new PrinterSettings();
+            pawnTicket1.SetParameterValue("dateLoan", transactionView.DateLoan.ToString("MMM dd, yyyy"));
+            pawnTicket1.SetParameterValue("dateMature", transactionView.DateMaturity.ToString("MMM dd, yyyy"));
+            pawnTicket1.SetParameterValue("dateExpiry", transactionView.DateExpiry.ToString("MMM dd, yyyy"));
+            pawnTicket1.SetParameterValue("auctionDate", "SUBASTA ON " + transactionView.AuctionDate.ToString("MMM dd, yyyy"));
+            pawnTicket1.SetParameterValue("clientName", transactionView.ClientFirstName + " " + transactionView.ClientLastName + " " + oldPawnTicket);
+            pawnTicket1.SetParameterValue("clientAddress", transactionView.ClientAddress);
+            pawnTicket1.SetParameterValue("principalWord", HelperClass.NumWordsWrapper(transactionView.Principal) + " Pesos");
+            pawnTicket1.SetParameterValue("principal", transactionView.Principal.ToString("F", CultureInfo.InvariantCulture));
+            pawnTicket1.SetParameterValue("appraisedValueWord", HelperClass.NumWordsWrapper(transactionView.AppraiseValue) + " Pesos");
+            pawnTicket1.SetParameterValue("appraisedValue", transactionView.AppraiseValue.ToString("F", CultureInfo.InvariantCulture));
+            pawnTicket1.SetParameterValue("interest", transactionView.Interest.ToString("F", CultureInfo.InvariantCulture));
+            pawnTicket1.SetParameterValue("interestPercent", transactionView.ItemTypeInterest);
+            pawnTicket1.SetParameterValue("interestPercentWord", HelperClass.NumWordsWrapper(transactionView.ItemTypeInterest) + " Pesos");
+            pawnTicket1.SetParameterValue("serviceCharge", transactionView.ServiceCharge.ToString("F", CultureInfo.InvariantCulture));
+            pawnTicket1.SetParameterValue("netProceeds", transactionView.NetProceed.ToString("F", CultureInfo.InvariantCulture));
+            pawnTicket1.SetParameterValue("idPresented", transactionView.IdType);
+            pawnTicket1.SetParameterValue("clientContactNumber", transactionView.ClientContactNumber);
+            pawnTicket1.SetParameterValue("daysToPenalty", transactionView.ItemTypeDaysToMature.ToString());
+            pawnTicket1.SetParameterValue("itemDescription", transactionItem);
+            pawnTicket1.SetParameterValue("processBy", transactionView.ProcessBy);
+            pawnTicket1.PrintOptions.PaperOrientation = PaperOrientation.Landscape;
+            pawnTicket1.PrintOptions.PrinterName = printerSetting.PrinterName;
+            pawnTicket1.PrintToPrinter(1, false, 0, 0);
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -144,6 +198,7 @@ namespace PawnSystem.UI.Backend.Forms
                         labelServiceCharge.Text = transactionView.ServiceCharge.ToString("F", CultureInfo.InvariantCulture);
                         labelAppraisedValue.Text = transactionView.AppraiseValue.ToString("F", CultureInfo.InvariantCulture);
                         labelNetProceeds.Text = transactionView.NetProceed.ToString("F", CultureInfo.InvariantCulture);
+                        buttonPrintPawnTicket.Visible = true;
                         buttonSave.Enabled = false;
                         buttonEdit.Enabled = false;
                         buttonNew.Enabled = false;
@@ -573,7 +628,11 @@ namespace PawnSystem.UI.Backend.Forms
 
                     if (savedItems > 0)
                     {
-                        MessageBox.Show("Transaction Saved", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        var msgConfirm = MessageBox.Show("Transaction Saved, Do you want to print Pawn Ticket?", "Pawnshop Management System", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if(msgConfirm == DialogResult.Yes)
+                        {
+                            PrintPawnTicket();
+                        }
                         this.Dispose();
                         formTransaction form = (formTransaction)Application.OpenForms["formTransaction"];
                         form.loadData();
@@ -763,6 +822,11 @@ namespace PawnSystem.UI.Backend.Forms
             {
                 MessageBox.Show("Select Item Type First", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonPrintPawnTicket_Click(object sender, EventArgs e)
+        {
+            PrintPawnTicket();
         }
     }
 }

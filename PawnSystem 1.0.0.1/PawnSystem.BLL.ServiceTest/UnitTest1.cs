@@ -12,20 +12,8 @@ namespace PawnSystem.BLL.ServiceTest
         [TestMethod]
         public void CreateAuctionDate()
         {
-            AuctionDateModel data = new AuctionDateModel()
-            {
-                Date = DateTime.Now,
-                ItemFrom = DateTime.Now,
-                ItemTo = DateTime.Now.AddDays(7),
-                CreatedBy = "",
-                CreatedDate = DateTime.Now,
-                ModifiedBy = "",
-                ModifiedDate = DateTime.Now
-            };
-
-            AuctionDateService service = new AuctionDateService();
-
-            service.Create(data);
+            DateTime dt = new DateTime(2017,01,10);
+            Console.WriteLine(dt.ToString("MMM dd, yyyy"));
         }
 
         [TestMethod]

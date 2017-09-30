@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formReportOutLedger));
             this.outLedgerReportViewer = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboTicketType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.dateTo = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.outLedgerReport = new PawnSystem.UI.Backend.Reports.Report.outLedgerReport();
-            this.comboTicketType = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,24 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // comboTicketType
+            // 
+            this.comboTicketType.FormattingEnabled = true;
+            this.comboTicketType.Location = new System.Drawing.Point(9, 143);
+            this.comboTicketType.Name = "comboTicketType";
+            this.comboTicketType.Size = new System.Drawing.Size(210, 26);
+            this.comboTicketType.TabIndex = 10;
+            this.comboTicketType.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboTicketType_KeyPress);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 18);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Ticket Type :";
+            // 
             // buttonGenerate
             // 
             this.buttonGenerate.Location = new System.Drawing.Point(9, 175);
@@ -98,18 +116,18 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 18);
+            this.label2.Size = new System.Drawing.Size(93, 18);
             this.label2.TabIndex = 3;
-            this.label2.Text = "To :";
+            this.label2.Text = "Date Loan To :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 18);
+            this.label1.Size = new System.Drawing.Size(111, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "From :";
+            this.label1.Text = "Date Loan From :";
             // 
             // dateFrom
             // 
@@ -118,23 +136,6 @@
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(210, 26);
             this.dateFrom.TabIndex = 0;
-            // 
-            // comboTicketType
-            // 
-            this.comboTicketType.FormattingEnabled = true;
-            this.comboTicketType.Location = new System.Drawing.Point(9, 143);
-            this.comboTicketType.Name = "comboTicketType";
-            this.comboTicketType.Size = new System.Drawing.Size(210, 26);
-            this.comboTicketType.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 18);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Ticket Type :";
             // 
             // formReportOutLedger
             // 

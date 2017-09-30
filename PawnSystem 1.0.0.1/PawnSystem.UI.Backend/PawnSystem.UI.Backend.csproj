@@ -7,7 +7,7 @@
     <ProjectGuid>{70D41D94-AA7A-486E-9154-A951A35BD9BA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>PawnSystem.UI.Backend</RootNamespace>
-    <AssemblyName>PawnSystem.UI.Backend</AssemblyName>
+    <AssemblyName>OCB Pawnshop Management System</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Coinstack.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PawnSystem.UI.Backend.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
@@ -77,6 +80,7 @@
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -155,6 +159,12 @@
     <Compile Include="Forms\formReportInLedger.Designer.cs">
       <DependentUpon>formReportInLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\formReportNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formReportNotice.Designer.cs">
+      <DependentUpon>formReportNotice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\formReportOutLedger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +194,12 @@
     </Compile>
     <Compile Include="Forms\formItemTypeProcess.Designer.cs">
       <DependentUpon>formItemTypeProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\formSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formSplash.Designer.cs">
+      <DependentUpon>formSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\formTicketType.cs">
       <SubType>Form</SubType>
@@ -254,6 +270,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>datasetInLedger.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Dataset\datasetNoticeReport.cs">
+      <DependentUpon>datasetNoticeReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\datasetNoticeReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datasetNoticeReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Dataset\datasetOutLedger.cs">
       <DependentUpon>datasetOutLedger.xsd</DependentUpon>
     </Compile>
@@ -289,6 +313,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>noticeLetter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report\noticeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>noticeReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Report\outLedgerReport.cs">
@@ -342,6 +372,9 @@
     <EmbeddedResource Include="Forms\formReportInLedger.resx">
       <DependentUpon>formReportInLedger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formReportNotice.resx">
+      <DependentUpon>formReportNotice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\formReportOutLedger.resx">
       <DependentUpon>formReportOutLedger.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formItemTypeProcess.resx">
       <DependentUpon>formItemTypeProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formSplash.resx">
+      <DependentUpon>formSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formTicketType.resx">
       <DependentUpon>formTicketType.cs</DependentUpon>
@@ -406,6 +442,10 @@
     <EmbeddedResource Include="Reports\Report\noticeLetter.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>noticeLetter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report\noticeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>noticeReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report\outLedgerReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -461,6 +501,17 @@
     <None Include="Reports\Dataset\datasetInLedger.xss">
       <DependentUpon>datasetInLedger.xsd</DependentUpon>
     </None>
+    <None Include="Reports\Dataset\datasetNoticeReport.xsc">
+      <DependentUpon>datasetNoticeReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\datasetNoticeReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>datasetNoticeReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Dataset\datasetNoticeReport.xss">
+      <DependentUpon>datasetNoticeReport.xsd</DependentUpon>
+    </None>
     <None Include="Reports\Dataset\datasetOutLedger.xsc">
       <DependentUpon>datasetOutLedger.xsd</DependentUpon>
     </None>
@@ -496,6 +547,10 @@
     <ProjectReference Include="..\PawnSystem.BLL.Service\PawnSystem.BLL.Service.csproj">
       <Project>{b0062c06-38c3-4a70-ad78-5aee3ca570fa}</Project>
       <Name>PawnSystem.BLL.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.Helper\PawnSystem.Helper.csproj">
+      <Project>{c10435c2-2308-404f-bb5d-a113acb3895d}</Project>
+      <Name>PawnSystem.Helper</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -575,6 +630,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Coinstack.ico" />
+    <None Include="Resources\ocb icon.png" />
     <None Include="Resources\Zoom-01.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

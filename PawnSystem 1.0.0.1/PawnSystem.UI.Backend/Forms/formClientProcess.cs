@@ -11,7 +11,7 @@ using System.Globalization;
 using System.IO;
 using PawnSystem.BLL.Model;
 using PawnSystem.BLL.Service;
-using PawnSystem.UI.Backend.Methods;
+using PawnSystem.Helper;
 namespace PawnSystem.UI.Backend.Forms
 {
     public partial class formClientProcess : Form
@@ -244,17 +244,17 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void textFirstname_Leave(object sender, EventArgs e)
         {
-            textFirstname.Text = Helper.toProperCase(textFirstname.Text);
+            textFirstname.Text = HelperClass.toProperCase(textFirstname.Text);
         }
 
         private void textLastname_Leave(object sender, EventArgs e)
         {
-            textLastname.Text = Helper.toProperCase(textLastname.Text);
+            textLastname.Text = HelperClass.toProperCase(textLastname.Text);
         }
 
         private void textAddress_Leave(object sender, EventArgs e)
         {
-            textAddress.Text = Helper.toProperCase(textAddress.Text);
+            textAddress.Text = HelperClass.toProperCase(textAddress.Text);
         }
 
         private void textContactNumber_KeyPress(object sender, KeyPressEventArgs e)

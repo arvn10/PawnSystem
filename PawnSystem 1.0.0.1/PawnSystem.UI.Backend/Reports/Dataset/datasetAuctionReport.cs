@@ -4,5 +4,8 @@
 
     public partial class datasetAuctionReport
     {
+        partial class auctionReportDataTable
+        {
+        }
     }
 }

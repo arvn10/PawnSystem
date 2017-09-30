@@ -38,9 +38,7 @@
             this.inLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.outLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auctionReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.penaltyNoticeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.letterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.envelopeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.penaltyNoticeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStraipConfiguration = new System.Windows.Forms.ToolStripDropDownButton();
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +109,7 @@
             this.inLedgerToolStripMenuItem,
             this.outLedgerToolStripMenuItem,
             this.auctionReportToolStripMenuItem,
-            this.penaltyNoticeToolStripMenuItem});
+            this.penaltyNoticeToolStripMenuItem1});
             this.toolStripReport.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Chart_01;
             this.toolStripReport.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripReport.Name = "toolStripReport";
@@ -139,26 +137,12 @@
             this.auctionReportToolStripMenuItem.Text = "Auction Report";
             this.auctionReportToolStripMenuItem.Click += new System.EventHandler(this.auctionReportToolStripMenuItem_Click);
             // 
-            // penaltyNoticeToolStripMenuItem
+            // penaltyNoticeToolStripMenuItem1
             // 
-            this.penaltyNoticeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.letterToolStripMenuItem,
-            this.envelopeToolStripMenuItem});
-            this.penaltyNoticeToolStripMenuItem.Name = "penaltyNoticeToolStripMenuItem";
-            this.penaltyNoticeToolStripMenuItem.Size = new System.Drawing.Size(190, 26);
-            this.penaltyNoticeToolStripMenuItem.Text = "Penalty Notice";
-            // 
-            // letterToolStripMenuItem
-            // 
-            this.letterToolStripMenuItem.Name = "letterToolStripMenuItem";
-            this.letterToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.letterToolStripMenuItem.Text = "Letter";
-            // 
-            // envelopeToolStripMenuItem
-            // 
-            this.envelopeToolStripMenuItem.Name = "envelopeToolStripMenuItem";
-            this.envelopeToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
-            this.envelopeToolStripMenuItem.Text = "Envelope";
+            this.penaltyNoticeToolStripMenuItem1.Name = "penaltyNoticeToolStripMenuItem1";
+            this.penaltyNoticeToolStripMenuItem1.Size = new System.Drawing.Size(190, 26);
+            this.penaltyNoticeToolStripMenuItem1.Text = "Penalty Notice";
+            this.penaltyNoticeToolStripMenuItem1.Click += new System.EventHandler(this.penaltyNoticeToolStripMenuItem1_Click);
             // 
             // toolStraipConfiguration
             // 
@@ -270,10 +254,8 @@
         private System.Windows.Forms.ToolStripMenuItem inLedgerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outLedgerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auctionReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem penaltyNoticeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem serviceChargeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem letterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem envelopeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem penaltyNoticeToolStripMenuItem1;
     }
 }
 

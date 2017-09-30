@@ -119,9 +119,6 @@ C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.UI.Backend\bin\Debug\
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.UI.Backend\bin\Debug\zh-Hans\Humanizer.resources.dll
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.UI.Backend\bin\Debug\zh-Hant\Humanizer.resources.dll
 C:\Users\acamacho\Desktop\PawnSystem\PawnSystem\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formReportTransaction.resources
-C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.UI.Backend.exe.config
-C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.UI.Backend.exe
-C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.UI.Backend.pdb
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\AForge.Controls.dll
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\AForge.dll
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\AForge.Imaging.dll
@@ -237,5 +234,14 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.B
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formUserTypeProcess.resources
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Properties.Resources.resources
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.csproj.GenerateResource.Cache
-C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.exe
-C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.Helper.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.Helper.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formReportNotice.resources
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formSplash.resources
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\OCB Pawnshop Management System.exe.config
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\OCB Pawnshop Management System.exe
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\OCB Pawnshop Management System.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\OCB Pawnshop Management System.exe
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\OCB Pawnshop Management System.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.DAL.Core.dll.config
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.csproj.CoreCompileInputs.cache

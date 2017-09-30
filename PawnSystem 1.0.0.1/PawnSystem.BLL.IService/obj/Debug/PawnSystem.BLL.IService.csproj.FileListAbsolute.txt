@@ -31,3 +31,4 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.IService\obj\Debug\PawnSystem.BLL.IService.csprojResolveAssemblyReference.cache
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.IService\obj\Debug\PawnSystem.BLL.IService.dll
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.IService\obj\Debug\PawnSystem.BLL.IService.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.IService\obj\Debug\PawnSystem.BLL.IService.csproj.CoreCompileInputs.cache

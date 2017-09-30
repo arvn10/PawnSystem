@@ -8,7 +8,7 @@ namespace PawnSystem.BLL.Model
 {
     public class OutLedgerModel
     {
-        public DateTime date { get; set; }
+        public string date { get; set; }
         public string transactionType { get; set; }
         public string pawnTicketNumber { get; set; }
         public string clientName { get; set; }
@@ -23,7 +23,7 @@ namespace PawnSystem.BLL.Model
     }
     public class InLedgerModel
     {
-        public DateTime date { get; set; }
+        public string date { get; set; }
         public string clientName { get; set; }
         public string pawnTicketNumber { get; set; }
         public double principal { get; set; }
@@ -47,5 +47,33 @@ namespace PawnSystem.BLL.Model
         public string interest { get; set; }
         public string penalty { get; set; }
         public string netProceed { get; set; }
+    }
+    public class NoticeReportModel
+    {
+        public string ClientName { get; set; }
+        public string ClientAddress { get; set; }
+        public string PawnTicketNumber { get; set; }
+        public string Principal { get; set; }
+        public string dateLoan { get; set; }
+        public string dateExpiry { get; set; }
+        public string dateAuction { get; set; }
+    }
+    public class NoticeModel
+    {
+        public string ClientName { get; set; }
+        public string ClientAddress { get; set; }
+        public string PawnTicketNumber { get; set; }
+        public string Principal { get; set; }
+        public string PrincipalText { get; set; }
+        public string dateLoan { get; set; }
+        public string datePenalty { get; set; }
+        public string dateAuction { get; set; }
+        public string dateExpiry { get; set; }
+        public string dateAuctionWord { get; set; }
+        public string monthDay { get; set; }
+        public string year { get; set; }
+        public string dateLoanReport { get; set; }
+        public string dateAuctionReport { get; set; }
+        public string dateExpiryReport { get; set; }
     }
 }

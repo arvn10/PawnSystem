@@ -25,16 +25,23 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            List<OutLedgerModel> source = reportService.GenerateOutLedger(Convert.ToInt32(comboTicketType.SelectedValue), dateFrom.Value, dateTo.Value);
-            if(source.Count > 0)
+            if (comboTicketType.Text.Contains("Select"))
             {
-                outLedgerReport.SetDataSource(source);
-                outLedgerReportViewer.ReportSource = outLedgerReport;
-                outLedgerReportViewer.Refresh();
+                MessageBox.Show("Select Item Type First", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("No Records Found", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                List<OutLedgerModel> source = reportService.GenerateOutLedger(Convert.ToInt32(comboTicketType.SelectedValue), dateFrom.Value, dateTo.Value);
+                if (source.Count > 0)
+                {
+                    outLedgerReport.SetDataSource(source);
+                    outLedgerReportViewer.ReportSource = outLedgerReport;
+                    outLedgerReportViewer.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("No Records Found", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -53,6 +60,11 @@ namespace PawnSystem.UI.Backend.Forms
             comboTicketType.ValueMember = "ID";
             comboTicketType.DataSource = ticketTypes;
             comboTicketType.Text = "Select Ticket Type";
+        }
+
+        private void comboTicketType_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

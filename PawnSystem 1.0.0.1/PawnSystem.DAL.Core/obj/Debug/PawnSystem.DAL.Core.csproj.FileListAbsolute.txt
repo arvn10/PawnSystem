@@ -70,3 +70,4 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csprojResolveAssemblyReference.cache
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.dll
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csproj.CoreCompileInputs.cache

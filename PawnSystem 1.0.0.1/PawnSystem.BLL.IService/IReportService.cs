@@ -13,5 +13,7 @@ namespace PawnSystem.BLL.IService
         List<InLedgerModel> GenerateInLedger(int ticketTypeID, DateTime from, DateTime to);
 
         List<AuctionModel> GenerateAuctionReport(int ticketTypeID, AuctionDateModel param);
+        List<NoticeModel> GenerateNoticeMail(int ticketTypeID, DateTime from, DateTime to);
+
     }
 }

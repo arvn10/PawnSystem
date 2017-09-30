@@ -72,6 +72,10 @@
       <Project>{d076d04c-ff85-4184-a2c2-533bfcc36528}</Project>
       <Name>PawnSystem.DAL.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PawnSystem.Helper\PawnSystem.Helper.csproj">
+      <Project>{c10435c2-2308-404f-bb5d-a113acb3895d}</Project>
+      <Name>PawnSystem.Helper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

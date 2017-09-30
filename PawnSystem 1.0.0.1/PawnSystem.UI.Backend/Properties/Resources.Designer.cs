@@ -303,6 +303,16 @@ namespace PawnSystem.UI.Backend.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ocb_icon {
+            get {
+                object obj = ResourceManager.GetObject("ocb icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Mimetypes_x_office_contact {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Mimetypes-x-office-contact", resourceCulture);

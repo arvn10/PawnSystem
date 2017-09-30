@@ -147,7 +147,6 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.BLL.IService.pdb
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.BLL.Model.pdb
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.BLL.Service.pdb
-C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.UI.Backend.pdb
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\EntityFramework.xml
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.DAL.Core.pdb
@@ -155,3 +154,8 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\AForge.Video.DirectShow.xml
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\AForge.Video.xml
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\AForge.xml
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.Helper.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.Helper.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.UI.Backend.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.UI.Backend.exe.config
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.ServiceTest\bin\Debug\PawnSystem.DAL.Core.dll.config

@@ -82,3 +82,7 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.csprojResolveAssemblyReference.cache
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.dll
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.Helper.dll
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.Helper.pdb
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\bin\Debug\PawnSystem.DAL.Core.dll.config
+C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Service\obj\Debug\PawnSystem.BLL.Service.csproj.CoreCompileInputs.cache

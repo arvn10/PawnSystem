@@ -186,5 +186,21 @@ namespace PawnSystem.UI.Backend.Forms
             form.MdiParent = this;
             form.Show();
         }
+
+        private void envelopeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseAllForms(this);
+            formReportNotice form = new formReportNotice();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void penaltyNoticeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CloseAllForms(this);
+            formReportNotice form = new formReportNotice();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
