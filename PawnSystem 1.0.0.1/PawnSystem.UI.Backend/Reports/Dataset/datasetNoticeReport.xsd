@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="datasetNoticeReport" targetNamespace="http://tempuri.org/datasetNoticeReport.xsd" xmlns:mstns="http://tempuri.org/datasetNoticeReport.xsd" xmlns="http://tempuri.org/datasetNoticeReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="datasetNoticeReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="datasetNoticeReport" msprop:Generator_UserDSName="datasetNoticeReport">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NoticeReport" msprop:Generator_TableClassName="NoticeReportDataTable" msprop:Generator_TableVarName="tableNoticeReport" msprop:Generator_TablePropName="NoticeReport" msprop:Generator_RowDeletingName="NoticeReportRowDeleting" msprop:Generator_RowChangingName="NoticeReportRowChanging" msprop:Generator_RowEvHandlerName="NoticeReportRowChangeEventHandler" msprop:Generator_RowDeletedName="NoticeReportRowDeleted" msprop:Generator_UserTableName="NoticeReport" msprop:Generator_RowChangedName="NoticeReportRowChanged" msprop:Generator_RowEvArgName="NoticeReportRowChangeEvent" msprop:Generator_RowClassName="NoticeReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientName" msprop:Generator_ColumnVarNameInTable="columnClientName" msprop:Generator_ColumnPropNameInRow="ClientName" msprop:Generator_ColumnPropNameInTable="ClientNameColumn" msprop:Generator_UserColumnName="ClientName" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientAddress" msprop:Generator_ColumnVarNameInTable="columnClientAddress" msprop:Generator_ColumnPropNameInRow="ClientAddress" msprop:Generator_ColumnPropNameInTable="ClientAddressColumn" msprop:Generator_UserColumnName="ClientAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="PawnTicketNumber" msprop:Generator_ColumnVarNameInTable="columnPawnTicketNumber" msprop:Generator_ColumnPropNameInRow="PawnTicketNumber" msprop:Generator_ColumnPropNameInTable="PawnTicketNumberColumn" msprop:Generator_UserColumnName="PawnTicketNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="Principal" msprop:Generator_ColumnVarNameInTable="columnPrincipal" msprop:Generator_ColumnPropNameInRow="Principal" msprop:Generator_ColumnPropNameInTable="PrincipalColumn" msprop:Generator_UserColumnName="Principal" type="xs:string" minOccurs="0" />
+              <xs:element name="dateLoan" msprop:Generator_ColumnVarNameInTable="columndateLoan" msprop:Generator_ColumnPropNameInRow="dateLoan" msprop:Generator_ColumnPropNameInTable="dateLoanColumn" msprop:Generator_UserColumnName="dateLoan" type="xs:string" minOccurs="0" />
+              <xs:element name="dateExpiry" msprop:Generator_ColumnVarNameInTable="columndateExpiry" msprop:Generator_ColumnPropNameInRow="dateExpiry" msprop:Generator_ColumnPropNameInTable="dateExpiryColumn" msprop:Generator_UserColumnName="dateExpiry" type="xs:string" minOccurs="0" />
+              <xs:element name="dateAuction" msprop:Generator_ColumnVarNameInTable="columndateAuction" msprop:Generator_ColumnPropNameInRow="dateAuction" msprop:Generator_ColumnPropNameInTable="dateAuctionColumn" msprop:Generator_UserColumnName="dateAuction" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
