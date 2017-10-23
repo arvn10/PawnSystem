@@ -233,5 +233,10 @@ namespace PawnSystem.UI.Backend.Forms
                 MessageBox.Show("No Transaction(s) to View", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

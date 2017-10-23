@@ -188,8 +188,8 @@ namespace PawnSystem.BLL.Service
                    .Where(d => d.Status == "Open" && d.Status != "In Auction")
                    .ToList()
                    .ForEach(u => u.Status = 
-                                     now >= u.DateMaturity ? 
-                                        now >= u.DateExpiry ? 
+                                     now > u.DateMaturity ? 
+                                        now > u.DateExpiry ? 
                                             "Expired" : 
                                             "Matured" 
                                      : u.Status);

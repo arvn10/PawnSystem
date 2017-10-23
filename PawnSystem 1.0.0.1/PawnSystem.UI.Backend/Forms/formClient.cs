@@ -17,6 +17,7 @@ namespace PawnSystem.UI.Backend.Forms
         private TransactionService stransaction;
         private TransactionItemService stransactionItem;
         public UserModel activeUser;
+        public string type ;
 
         public formClient()
         {
@@ -70,6 +71,17 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void formClient_Load(object sender, EventArgs e)
         {
+            if (type == "transfer")
+            {
+                toolStripButtonSelect.Visible = true;
+            }
+            else
+            {
+                buttonNew.Visible = true;
+                buttonEdit.Visible = true;
+                buttonDelete.Visible = true;
+                toolStripButtonTransactionProfile.Visible = true;
+            }
             textSearch.Focus();
         }
 

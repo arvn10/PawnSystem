@@ -225,6 +225,12 @@
     <Compile Include="Forms\formTransactionProcess.Designer.cs">
       <DependentUpon>formTransactionProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\formTransactionTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formTransactionTransfer.Designer.cs">
+      <DependentUpon>formTransactionTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\formUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formTransactionProcess.resx">
       <DependentUpon>formTransactionProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formTransactionTransfer.resx">
+      <DependentUpon>formTransactionTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formUser.resx">
       <DependentUpon>formUser.cs</DependentUpon>
@@ -630,6 +639,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Coinstack.ico" />
+    <None Include="Resources\Button Next-01.ico" />
     <None Include="Resources\ocb icon.png" />
     <None Include="Resources\Zoom-01.ico" />
   </ItemGroup>

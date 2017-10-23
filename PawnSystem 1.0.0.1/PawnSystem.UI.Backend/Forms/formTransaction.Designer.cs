@@ -81,18 +81,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.textSearch);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 31);
+            this.groupBox1.Location = new System.Drawing.Point(10, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1415, 59);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(1132, 47);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             // 
             // textSearch
             // 
             this.textSearch.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(77, 21);
+            this.textSearch.Location = new System.Drawing.Point(62, 17);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
             this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(587, 26);
+            this.textSearch.Size = new System.Drawing.Size(470, 22);
             this.textSearch.TabIndex = 0;
             this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
             // 
@@ -100,9 +103,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Location = new System.Drawing.Point(5, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 21);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Search :";
             // 
@@ -119,14 +123,14 @@
             this.buttonView});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1437, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(1150, 27);
             this.toolStrip1.TabIndex = 24;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // dataGrid
             // 
@@ -169,7 +173,8 @@
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGrid.Location = new System.Drawing.Point(12, 96);
+            this.dataGrid.Location = new System.Drawing.Point(10, 77);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
@@ -190,7 +195,7 @@
             this.dataGrid.ShowCellToolTips = false;
             this.dataGrid.ShowEditingIcon = false;
             this.dataGrid.ShowRowErrors = false;
-            this.dataGrid.Size = new System.Drawing.Size(1415, 654);
+            this.dataGrid.Size = new System.Drawing.Size(1132, 523);
             this.dataGrid.TabIndex = 1;
             // 
             // ID
@@ -308,7 +313,7 @@
             this.buttonPawn.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Blank;
             this.buttonPawn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonPawn.Name = "buttonPawn";
-            this.buttonPawn.Size = new System.Drawing.Size(136, 25);
+            this.buttonPawn.Size = new System.Drawing.Size(116, 24);
             this.buttonPawn.Text = "[CTRL+1] Pawn";
             this.buttonPawn.ToolTipText = "Pawn";
             this.buttonPawn.Click += new System.EventHandler(this.buttonPawn_Click);
@@ -320,7 +325,7 @@
             this.buttonRenew.Image = global::PawnSystem.UI.Backend.Properties.Resources.Button_Refresh_01;
             this.buttonRenew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonRenew.Name = "buttonRenew";
-            this.buttonRenew.Size = new System.Drawing.Size(144, 25);
+            this.buttonRenew.Size = new System.Drawing.Size(124, 24);
             this.buttonRenew.Text = "[CTRL+2] Renew";
             this.buttonRenew.ToolTipText = "Renew";
             this.buttonRenew.Click += new System.EventHandler(this.buttonRenew_Click);
@@ -332,7 +337,7 @@
             this.buttonRedeem.Image = global::PawnSystem.UI.Backend.Properties.Resources.Edit_Document_01;
             this.buttonRedeem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonRedeem.Name = "buttonRedeem";
-            this.buttonRedeem.Size = new System.Drawing.Size(154, 25);
+            this.buttonRedeem.Size = new System.Drawing.Size(132, 24);
             this.buttonRedeem.Text = "[CTRL+3] Redeem";
             this.buttonRedeem.Click += new System.EventHandler(this.buttonRedeem_Click);
             // 
@@ -343,7 +348,7 @@
             this.buttonEdit.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Write;
             this.buttonEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(125, 25);
+            this.buttonEdit.Size = new System.Drawing.Size(107, 24);
             this.buttonEdit.Text = "[CTRL+4] Edit";
             this.buttonEdit.ToolTipText = "Edit/View";
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
@@ -355,21 +360,22 @@
             this.buttonView.Image = global::PawnSystem.UI.Backend.Properties.Resources.Zoom_01;
             this.buttonView.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonView.Name = "buttonView";
-            this.buttonView.Size = new System.Drawing.Size(132, 25);
+            this.buttonView.Size = new System.Drawing.Size(113, 24);
             this.buttonView.Text = "[CTRL+5] View";
             this.buttonView.ToolTipText = "Edit/View";
             this.buttonView.Click += new System.EventHandler(this.buttonView_Click);
             // 
             // formTransaction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1437, 762);
+            this.ClientSize = new System.Drawing.Size(1150, 610);
             this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formTransaction";

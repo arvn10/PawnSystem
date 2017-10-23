@@ -41,7 +41,6 @@
             this.textSearch = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.buttonNew = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.buttonEdit = new System.Windows.Forms.ToolStripButton();
             this.buttonDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTransactionProfile = new System.Windows.Forms.ToolStripButton();
@@ -53,6 +52,7 @@
             this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.toolStripButtonSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,9 +61,10 @@
             // textSearch
             // 
             this.textSearch.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSearch.Location = new System.Drawing.Point(72, 21);
+            this.textSearch.Location = new System.Drawing.Point(58, 17);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(2);
             this.textSearch.Name = "textSearch";
-            this.textSearch.Size = new System.Drawing.Size(720, 26);
+            this.textSearch.Size = new System.Drawing.Size(577, 22);
             this.textSearch.TabIndex = 9;
             this.textSearch.TextChanged += new System.EventHandler(this.textSearch_TextChanged);
             // 
@@ -73,13 +74,13 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.buttonNew,
-            this.toolStripSeparator1,
             this.buttonEdit,
             this.buttonDelete,
-            this.toolStripButtonTransactionProfile});
+            this.toolStripButtonTransactionProfile,
+            this.toolStripButtonSelect});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(823, 28);
+            this.toolStrip1.Size = new System.Drawing.Size(658, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -90,15 +91,11 @@
             this.buttonNew.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Blank;
             this.buttonNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonNew.Name = "buttonNew";
-            this.buttonNew.Size = new System.Drawing.Size(129, 25);
+            this.buttonNew.Size = new System.Drawing.Size(111, 24);
             this.buttonNew.Text = "[CTRL+1] New";
             this.buttonNew.ToolTipText = "New";
+            this.buttonNew.Visible = false;
             this.buttonNew.Click += new System.EventHandler(this.buttonNew_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // buttonEdit
             // 
@@ -107,8 +104,9 @@
             this.buttonEdit.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Write;
             this.buttonEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(125, 25);
+            this.buttonEdit.Size = new System.Drawing.Size(107, 24);
             this.buttonEdit.Text = "[CTRL+2] Edit";
+            this.buttonEdit.Visible = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // buttonDelete
@@ -118,8 +116,9 @@
             this.buttonDelete.Image = global::PawnSystem.UI.Backend.Properties.Resources.Delete;
             this.buttonDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(142, 25);
+            this.buttonDelete.Size = new System.Drawing.Size(123, 24);
             this.buttonDelete.Text = "[CTRL+3] Delete";
+            this.buttonDelete.Visible = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // toolStripButtonTransactionProfile
@@ -129,9 +128,10 @@
             this.toolStripButtonTransactionProfile.Image = global::PawnSystem.UI.Backend.Properties.Resources.Money;
             this.toolStripButtonTransactionProfile.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonTransactionProfile.Name = "toolStripButtonTransactionProfile";
-            this.toolStripButtonTransactionProfile.Size = new System.Drawing.Size(232, 25);
+            this.toolStripButtonTransactionProfile.Size = new System.Drawing.Size(194, 24);
             this.toolStripButtonTransactionProfile.Text = "[CTRL+4] View Transaction(s)";
             this.toolStripButtonTransactionProfile.ToolTipText = "New";
+            this.toolStripButtonTransactionProfile.Visible = false;
             this.toolStripButtonTransactionProfile.Click += new System.EventHandler(this.toolStripButtonTransactionProfile_Click);
             // 
             // dataGrid
@@ -165,7 +165,8 @@
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGrid.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGrid.Location = new System.Drawing.Point(12, 96);
+            this.dataGrid.Location = new System.Drawing.Point(10, 77);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
@@ -184,7 +185,7 @@
             this.dataGrid.ShowCellToolTips = false;
             this.dataGrid.ShowEditingIcon = false;
             this.dataGrid.ShowRowErrors = false;
-            this.dataGrid.Size = new System.Drawing.Size(798, 438);
+            this.dataGrid.Size = new System.Drawing.Size(638, 350);
             this.dataGrid.TabIndex = 8;
             // 
             // ID
@@ -195,7 +196,7 @@
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
-            this.ID.Width = 50;
+            this.ID.Width = 44;
             // 
             // LastName
             // 
@@ -205,7 +206,7 @@
             this.LastName.HeaderText = "Lastname";
             this.LastName.Name = "LastName";
             this.LastName.ReadOnly = true;
-            this.LastName.Width = 96;
+            this.LastName.Width = 85;
             // 
             // FirstName
             // 
@@ -215,7 +216,7 @@
             this.FirstName.HeaderText = "Firstname";
             this.FirstName.Name = "FirstName";
             this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 99;
+            this.FirstName.Width = 87;
             // 
             // Address
             // 
@@ -225,7 +226,7 @@
             this.Address.HeaderText = "Address";
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
-            this.Address.Width = 87;
+            this.Address.Width = 76;
             // 
             // ContactNumber
             // 
@@ -235,15 +236,16 @@
             this.ContactNumber.HeaderText = "Contact Number";
             this.ContactNumber.Name = "ContactNumber";
             this.ContactNumber.ReadOnly = true;
-            this.ContactNumber.Width = 127;
+            this.ContactNumber.Width = 108;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Location = new System.Drawing.Point(5, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 21);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Search :";
             // 
@@ -251,24 +253,39 @@
             // 
             this.groupBox1.Controls.Add(this.textSearch);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 31);
+            this.groupBox1.Location = new System.Drawing.Point(10, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(798, 59);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(638, 47);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // toolStripButtonSelect
+            // 
+            this.toolStripButtonSelect.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButtonSelect.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButtonSelect.Image = global::PawnSystem.UI.Backend.Properties.Resources.Money;
+            this.toolStripButtonSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSelect.Name = "toolStripButtonSelect";
+            this.toolStripButtonSelect.Size = new System.Drawing.Size(66, 24);
+            this.toolStripButtonSelect.Text = "Select";
+            this.toolStripButtonSelect.ToolTipText = "New";
+            this.toolStripButtonSelect.Visible = false;
+            // 
             // formClient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(823, 548);
+            this.ClientSize = new System.Drawing.Size(658, 438);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formClient";
@@ -293,7 +310,6 @@
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButtonTransactionProfile;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
@@ -301,5 +317,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNumber;
         private System.Windows.Forms.ToolStripButton buttonDelete;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSelect;
     }
 }

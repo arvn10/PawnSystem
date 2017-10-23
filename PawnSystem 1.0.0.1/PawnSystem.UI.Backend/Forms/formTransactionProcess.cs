@@ -11,7 +11,6 @@ using System.Configuration;
 
 using PawnSystem.BLL.Service;
 using PawnSystem.BLL.Model;
-using NodaTime;
 using System.Globalization;
 using System.Drawing.Printing;
 using CrystalDecisions.Shared;
@@ -68,7 +67,7 @@ namespace PawnSystem.UI.Backend.Forms
         {
             TransactionView transactionView = transactionService.Get().Where(x => x.ID == transactionID).FirstOrDefault();
             string oldPawnTicket = string.Empty;
-            if(transactionView.OldID != 0)
+            if (transactionView.OldID != 0)
             {
                 TransactionView transactionViewOld = transactionService.Get().Where(x => x.ID == transactionView.OldID).FirstOrDefault();
                 oldPawnTicket = transactionViewOld.PawnTicketNumber;
@@ -88,7 +87,7 @@ namespace PawnSystem.UI.Backend.Forms
                     transactionItem = transactionItem + ", " + item.Description;
                 }
             }
-            
+
             PrinterSettings printerSetting = new PrinterSettings();
             pawnTicket1.SetParameterValue("dateLoan", transactionView.DateLoan.ToString("MMM dd, yyyy"));
             pawnTicket1.SetParameterValue("dateMature", transactionView.DateMaturity.ToString("MMM dd, yyyy"));
@@ -189,6 +188,8 @@ namespace PawnSystem.UI.Backend.Forms
                     datePickerLoan.Value = transactionView.DateLoan;
                     datePickerMaturity.Value = transactionView.DateMaturity;
                     datePickerExpiry.Value = transactionView.DateExpiry;
+                    toolStripSeparator2.Visible = true;
+                    buttonPrintPawnTicket.Visible = true;
 
                     if (processType == "View")
                     {
@@ -198,7 +199,9 @@ namespace PawnSystem.UI.Backend.Forms
                         labelServiceCharge.Text = transactionView.ServiceCharge.ToString("F", CultureInfo.InvariantCulture);
                         labelAppraisedValue.Text = transactionView.AppraiseValue.ToString("F", CultureInfo.InvariantCulture);
                         labelNetProceeds.Text = transactionView.NetProceed.ToString("F", CultureInfo.InvariantCulture);
-                        buttonPrintPawnTicket.Visible = true;
+                        buttonTransfer.Visible = true;
+                        toolStripSeparator1.Visible = true;
+
                         buttonSave.Enabled = false;
                         buttonEdit.Enabled = false;
                         buttonNew.Enabled = false;
@@ -216,7 +219,6 @@ namespace PawnSystem.UI.Backend.Forms
                         labelDateExpire.Visible = false;
                         datePickerExpiry.Visible = false;
                     }
-
                 }
 
                 TransactionItemService transactionItemService = new TransactionItemService();
@@ -253,7 +255,7 @@ namespace PawnSystem.UI.Backend.Forms
 
         private void comboItemType_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = e.KeyChar == 38 || e.KeyChar == 40 ? false : true;
+
         }
 
         private void comboAuctionDate_KeyPress(object sender, KeyPressEventArgs e)
@@ -286,26 +288,23 @@ namespace PawnSystem.UI.Backend.Forms
                     var serviceCharge = compute.ServiceCharge;
                     var appraisedValue = compute.AppraiseValue;
 
-                    if (processType != "Pawn")
+                    if (processType == "Renew")
                     {
-                        if (processType != "Redeem")
+                        if (datePickerLoan.Value > transactionView.DatePenalty)
                         {
-                            if (datePickerLoan.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                            }
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
                         }
-                        else if (processType == "Redeem")
+                    }
+                    else if (processType == "Redeem")
+                    {
+                        if (datePickerClosed.Value > transactionView.DatePenalty)
                         {
-                            if (datePickerClosed.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                                //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
-                            }
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
+                            //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
                         }
                     }
 
@@ -350,28 +349,27 @@ namespace PawnSystem.UI.Backend.Forms
                     var serviceCharge = compute.ServiceCharge;
                     var appraisedValue = compute.AppraiseValue;
 
-                    if (processType != "Pawn")
+
+                    if (processType == "Renew")
                     {
-                        if (processType != "Redeem")
+                        if (datePickerLoan.Value > transactionView.DatePenalty)
                         {
-                            if (datePickerLoan.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                            }
-                        }
-                        else if (processType == "Redeem")
-                        {
-                            if (datePickerClosed.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                                //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
-                            }
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
                         }
                     }
+                    else if (processType == "Redeem")
+                    {
+                        if (datePickerClosed.Value > transactionView.DatePenalty)
+                        {
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
+                            //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
+                        }
+                    }
+
 
                     netProceed = principal - (interest + penalty + serviceCharge);
                     labelPrincipal.Text = Convert.ToDouble(textPrincipal.Text).ToString("F", CultureInfo.InvariantCulture);
@@ -629,7 +627,7 @@ namespace PawnSystem.UI.Backend.Forms
                     if (savedItems > 0)
                     {
                         var msgConfirm = MessageBox.Show("Transaction Saved, Do you want to print Pawn Ticket?", "Pawnshop Management System", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if(msgConfirm == DialogResult.Yes)
+                        if (msgConfirm == DialogResult.Yes)
                         {
                             PrintPawnTicket();
                         }
@@ -694,28 +692,27 @@ namespace PawnSystem.UI.Backend.Forms
                     var serviceCharge = compute.ServiceCharge;
                     var appraisedValue = compute.AppraiseValue;
 
-                    if (processType != "Pawn")
+
+                    if (processType == "Renew")
                     {
-                        if (processType != "Redeem")
+                        if (datePickerLoan.Value > transactionView.DatePenalty)
                         {
-                            if (datePickerLoan.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                            }
-                        }
-                        else if (processType == "Redeem")
-                        {
-                            if (datePickerClosed.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                                //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
-                            }
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
                         }
                     }
+                    else if (processType == "Redeem")
+                    {
+                        if (datePickerClosed.Value > transactionView.DatePenalty)
+                        {
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
+                            //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
+                        }
+                    }
+
 
                     netProceed = principal - (interest + penalty + serviceCharge);
                     labelServiceCharge.Text = serviceCharge.ToString("F", CultureInfo.InvariantCulture);
@@ -779,26 +776,23 @@ namespace PawnSystem.UI.Backend.Forms
                     var serviceCharge = compute.ServiceCharge;
                     var appraisedValue = compute.AppraiseValue;
 
-                    if (processType != "Pawn")
+                    if (processType == "Renew")
                     {
-                        if (processType != "Redeem")
+                        if (datePickerLoan.Value > transactionView.DatePenalty)
                         {
-                            if (datePickerLoan.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                            }
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerLoan.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
                         }
-                        else if (processType == "Redeem")
+                    }
+                    else if (processType == "Redeem")
+                    {
+                        if (datePickerClosed.Value > transactionView.DatePenalty)
                         {
-                            if (datePickerClosed.Value > transactionView.DatePenalty)
-                            {
-                                int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
-                                multiplier = multiplier == 0 ? 1 : multiplier + 1;
-                                penalty = compute.Penalty * (multiplier);
-                                //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
-                            }
+                            int multiplier = Convert.ToInt32(Math.Round((datePickerClosed.Value - transactionView.DatePenalty).TotalDays)) / 30;
+                            multiplier = multiplier == 0 ? 1 : multiplier + 1;
+                            penalty = compute.Penalty * (multiplier);
+                            //penalty = computationHelper.getPenalty(principal, itemTypeModel.Penalty, multiplier);
                         }
                     }
 
