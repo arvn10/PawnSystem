@@ -44,6 +44,7 @@
             this.buttonEdit = new System.Windows.Forms.ToolStripButton();
             this.buttonDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTransactionProfile = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSelect = new System.Windows.Forms.ToolStripButton();
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +53,6 @@
             this.ContactNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.toolStripButtonSelect = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -80,7 +80,7 @@
             this.toolStripButtonSelect});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(658, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(658, 27);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -133,6 +133,19 @@
             this.toolStripButtonTransactionProfile.ToolTipText = "New";
             this.toolStripButtonTransactionProfile.Visible = false;
             this.toolStripButtonTransactionProfile.Click += new System.EventHandler(this.toolStripButtonTransactionProfile_Click);
+            // 
+            // toolStripButtonSelect
+            // 
+            this.toolStripButtonSelect.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButtonSelect.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButtonSelect.Image = global::PawnSystem.UI.Backend.Properties.Resources.Money;
+            this.toolStripButtonSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonSelect.Name = "toolStripButtonSelect";
+            this.toolStripButtonSelect.Size = new System.Drawing.Size(101, 24);
+            this.toolStripButtonSelect.Text = "Select Client";
+            this.toolStripButtonSelect.ToolTipText = "New";
+            this.toolStripButtonSelect.Visible = false;
+            this.toolStripButtonSelect.Click += new System.EventHandler(this.toolStripButtonSelect_Click);
             // 
             // dataGrid
             // 
@@ -261,18 +274,6 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // toolStripButtonSelect
-            // 
-            this.toolStripButtonSelect.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButtonSelect.ForeColor = System.Drawing.Color.Black;
-            this.toolStripButtonSelect.Image = global::PawnSystem.UI.Backend.Properties.Resources.Money;
-            this.toolStripButtonSelect.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonSelect.Name = "toolStripButtonSelect";
-            this.toolStripButtonSelect.Size = new System.Drawing.Size(66, 24);
-            this.toolStripButtonSelect.Text = "Select";
-            this.toolStripButtonSelect.ToolTipText = "New";
-            this.toolStripButtonSelect.Visible = false;
             // 
             // formClient
             // 

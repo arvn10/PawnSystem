@@ -18,7 +18,8 @@ namespace PawnSystem.UI.Backend.Forms
         private TransactionItemService stransactionItem;
         public UserModel activeUser;
         public string type ;
-
+        public Int32 transactionID;
+        public string pawnTicketNumber;
         public formClient()
         {
             InitializeComponent();
@@ -213,6 +214,53 @@ namespace PawnSystem.UI.Backend.Forms
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void toolStripButtonSelect_Click(object sender, EventArgs e)
+        {
+            if (dataGrid.Rows.Count > 0)
+            {
+                var confirm = MessageBox.Show("Are you sure you want to transfer Pawn Ticket Number " + pawnTicketNumber + " to " + dataGrid.CurrentRow.Cells[1].Value + " " + dataGrid.CurrentRow.Cells[2].Value + "?","Pawnshop Management System",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes) {
+                    TransactionView data = stransaction.Get().Where(x => x.ID == transactionID).FirstOrDefault();
+                    if(stransaction.Update(new TransactionCreateEdit()
+                    {
+                        ID = transactionID,
+                        ClientID = Convert.ToInt32(dataGrid.CurrentRow.Cells[0].Value),
+                        ItemTypeID = data.ItemTypeID,
+                        AuctionDateID = data.AuctionDateID,
+                        TicketTypeID = data.TicketTypeID,
+                        IdTypeID = data.IdTypeID,
+                        OldTransactionID = data.OldID,
+                        PawnTicketNumber = data.PawnTicketNumber,
+                        TransactionType = data.TransactionType,
+                        DateLoan = data.DateLoan,
+                        DateMaturity = data.DateMaturity,
+                        DateExpiry = data.DateExpiry,
+                        DatePenalty = data.DatePenalty,
+                        Principal = data.Principal,
+                        Interest = data.Interest,
+                        ServiceCharge = data.ServiceCharge,
+                        Penalty = data.Penalty,
+                        AppraiseValue = data.AppraiseValue,
+                        NetProceed = data.NetProceed,
+                        Status = data.Status,
+                        DateClosed = data.DateClosed,
+                        ModifiedBy = activeUser.FirstName + " " + activeUser.LastName
+                    }) != null)
+                    {
+                        
+                        MessageBox.Show("Transaction Transferrred", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        formMain formMain = new formMain();
+                        formMain.CloseAllForms(formMain);
+                        this.Dispose();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("No Client Profile to Select", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

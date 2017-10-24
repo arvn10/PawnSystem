@@ -822,5 +822,15 @@ namespace PawnSystem.UI.Backend.Forms
         {
             PrintPawnTicket();
         }
+
+        private void buttonTransfer_Click(object sender, EventArgs e)
+        {
+            formClient formClient = new formClient();
+            formClient.activeUser = activeUser;
+            formClient.pawnTicketNumber = textPawnTicketNumber.Text;
+            formClient.transactionID = transactionID;
+            formClient.type = "transfer";
+            formClient.ShowDialog();
+        }
     }
 }

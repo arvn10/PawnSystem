@@ -70,7 +70,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.buttonSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.buttonTransfer = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.buttonPrintPawnTicket = new System.Windows.Forms.ToolStripButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textTransactionItem = new System.Windows.Forms.TextBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
@@ -79,13 +83,9 @@
             this.buttonSaveItem = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.pawnTicket1 = new PawnSystem.UI.Backend.Reports.Report.pawnTicket();
-            this.buttonSave = new System.Windows.Forms.ToolStripButton();
-            this.buttonPrintPawnTicket = new System.Windows.Forms.ToolStripButton();
             this.buttonNew = new System.Windows.Forms.ToolStripButton();
             this.buttonEdit = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.buttonTransfer = new System.Windows.Forms.ToolStripButton();
+            this.pawnTicket1 = new PawnSystem.UI.Backend.Reports.Report.pawnTicket();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -120,9 +120,9 @@
             this.groupBox1.Controls.Add(this.labelDateClosed);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(302, 245);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
@@ -134,7 +134,7 @@
             this.datePickerPenalty.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerPenalty.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerPenalty.Location = new System.Drawing.Point(145, 169);
-            this.datePickerPenalty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerPenalty.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerPenalty.Name = "datePickerPenalty";
             this.datePickerPenalty.Size = new System.Drawing.Size(151, 22);
             this.datePickerPenalty.TabIndex = 8;
@@ -156,7 +156,7 @@
             this.comboItemType.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboItemType.FormattingEnabled = true;
             this.comboItemType.Location = new System.Drawing.Point(4, 40);
-            this.comboItemType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboItemType.Margin = new System.Windows.Forms.Padding(2);
             this.comboItemType.Name = "comboItemType";
             this.comboItemType.Size = new System.Drawing.Size(137, 22);
             this.comboItemType.TabIndex = 1;
@@ -181,7 +181,7 @@
             this.comboIdType.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboIdType.FormattingEnabled = true;
             this.comboIdType.Location = new System.Drawing.Point(4, 126);
-            this.comboIdType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboIdType.Margin = new System.Windows.Forms.Padding(2);
             this.comboIdType.Name = "comboIdType";
             this.comboIdType.Size = new System.Drawing.Size(137, 22);
             this.comboIdType.TabIndex = 5;
@@ -216,7 +216,7 @@
             // 
             this.textPawnTicketNumber.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPawnTicketNumber.Location = new System.Drawing.Point(4, 83);
-            this.textPawnTicketNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPawnTicketNumber.Margin = new System.Windows.Forms.Padding(2);
             this.textPawnTicketNumber.Name = "textPawnTicketNumber";
             this.textPawnTicketNumber.Size = new System.Drawing.Size(137, 22);
             this.textPawnTicketNumber.TabIndex = 3;
@@ -227,7 +227,7 @@
             this.comboTicketType.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTicketType.FormattingEnabled = true;
             this.comboTicketType.Location = new System.Drawing.Point(145, 82);
-            this.comboTicketType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboTicketType.Margin = new System.Windows.Forms.Padding(2);
             this.comboTicketType.Name = "comboTicketType";
             this.comboTicketType.Size = new System.Drawing.Size(151, 22);
             this.comboTicketType.TabIndex = 4;
@@ -262,7 +262,7 @@
             // 
             this.textPrincipal.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textPrincipal.Location = new System.Drawing.Point(145, 40);
-            this.textPrincipal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPrincipal.Margin = new System.Windows.Forms.Padding(2);
             this.textPrincipal.Name = "textPrincipal";
             this.textPrincipal.Size = new System.Drawing.Size(151, 22);
             this.textPrincipal.TabIndex = 2;
@@ -275,7 +275,7 @@
             this.datePickerExpiry.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerExpiry.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerExpiry.Location = new System.Drawing.Point(145, 212);
-            this.datePickerExpiry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerExpiry.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerExpiry.Name = "datePickerExpiry";
             this.datePickerExpiry.Size = new System.Drawing.Size(151, 22);
             this.datePickerExpiry.TabIndex = 10;
@@ -298,7 +298,7 @@
             this.datePickerMaturity.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerMaturity.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerMaturity.Location = new System.Drawing.Point(4, 212);
-            this.datePickerMaturity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerMaturity.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerMaturity.Name = "datePickerMaturity";
             this.datePickerMaturity.Size = new System.Drawing.Size(137, 22);
             this.datePickerMaturity.TabIndex = 9;
@@ -321,7 +321,7 @@
             this.datePickerLoan.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerLoan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerLoan.Location = new System.Drawing.Point(4, 169);
-            this.datePickerLoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerLoan.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerLoan.Name = "datePickerLoan";
             this.datePickerLoan.Size = new System.Drawing.Size(137, 22);
             this.datePickerLoan.TabIndex = 7;
@@ -345,7 +345,7 @@
             this.comboAuctionDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboAuctionDate.FormattingEnabled = true;
             this.comboAuctionDate.Location = new System.Drawing.Point(145, 126);
-            this.comboAuctionDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboAuctionDate.Margin = new System.Windows.Forms.Padding(2);
             this.comboAuctionDate.Name = "comboAuctionDate";
             this.comboAuctionDate.Size = new System.Drawing.Size(151, 22);
             this.comboAuctionDate.TabIndex = 6;
@@ -370,7 +370,7 @@
             this.datePickerClosed.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePickerClosed.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datePickerClosed.Location = new System.Drawing.Point(4, 169);
-            this.datePickerClosed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.datePickerClosed.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerClosed.Name = "datePickerClosed";
             this.datePickerClosed.Size = new System.Drawing.Size(137, 22);
             this.datePickerClosed.TabIndex = 32;
@@ -405,9 +405,9 @@
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(314, 25);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(258, 245);
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
@@ -573,11 +573,55 @@
             this.toolStrip1.TabIndex = 30;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.ForeColor = System.Drawing.Color.Black;
+            this.buttonSave.Image = global::PawnSystem.UI.Backend.Properties.Resources.Save_01;
+            this.buttonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(110, 24);
+            this.buttonSave.Text = "[CTRL+S] Save";
+            this.buttonSave.ToolTipText = "Save";
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             this.toolStripSeparator1.Visible = false;
+            // 
+            // buttonTransfer
+            // 
+            this.buttonTransfer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTransfer.ForeColor = System.Drawing.Color.Black;
+            this.buttonTransfer.Image = global::PawnSystem.UI.Backend.Properties.Resources.Button_Next_01;
+            this.buttonTransfer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buttonTransfer.Name = "buttonTransfer";
+            this.buttonTransfer.Size = new System.Drawing.Size(131, 24);
+            this.buttonTransfer.Text = "[CTRL+T] Transfer";
+            this.buttonTransfer.ToolTipText = "Save";
+            this.buttonTransfer.Visible = false;
+            this.buttonTransfer.Click += new System.EventHandler(this.buttonTransfer_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator2.Visible = false;
+            // 
+            // buttonPrintPawnTicket
+            // 
+            this.buttonPrintPawnTicket.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrintPawnTicket.ForeColor = System.Drawing.Color.Black;
+            this.buttonPrintPawnTicket.Image = global::PawnSystem.UI.Backend.Properties.Resources.Contract;
+            this.buttonPrintPawnTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.buttonPrintPawnTicket.Name = "buttonPrintPawnTicket";
+            this.buttonPrintPawnTicket.Size = new System.Drawing.Size(130, 24);
+            this.buttonPrintPawnTicket.Text = "Print Pawn Ticket";
+            this.buttonPrintPawnTicket.ToolTipText = "Print Pawn Ticket";
+            this.buttonPrintPawnTicket.Visible = false;
+            this.buttonPrintPawnTicket.Click += new System.EventHandler(this.buttonPrintPawnTicket_Click);
             // 
             // groupBox4
             // 
@@ -588,9 +632,9 @@
             this.groupBox4.Controls.Add(this.toolStrip2);
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 275);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(562, 193);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
@@ -601,7 +645,7 @@
             this.textTransactionItem.Enabled = false;
             this.textTransactionItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textTransactionItem.Location = new System.Drawing.Point(4, 71);
-            this.textTransactionItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textTransactionItem.Margin = new System.Windows.Forms.Padding(2);
             this.textTransactionItem.MaxLength = 100;
             this.textTransactionItem.Multiline = true;
             this.textTransactionItem.Name = "textTransactionItem";
@@ -622,7 +666,7 @@
             this.ID,
             this.ItemDescription});
             this.dataGrid.Location = new System.Drawing.Point(196, 48);
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(2);
             this.dataGrid.MultiSelect = false;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
@@ -663,7 +707,7 @@
             this.buttonSaveItem.Enabled = false;
             this.buttonSaveItem.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSaveItem.Location = new System.Drawing.Point(126, 166);
-            this.buttonSaveItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSaveItem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSaveItem.Name = "buttonSaveItem";
             this.buttonSaveItem.Size = new System.Drawing.Size(55, 21);
             this.buttonSaveItem.TabIndex = 20;
@@ -697,31 +741,6 @@
             this.toolStrip2.TabIndex = 21;
             this.toolStrip2.Text = "toolStrip2";
             // 
-            // buttonSave
-            // 
-            this.buttonSave.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.ForeColor = System.Drawing.Color.Black;
-            this.buttonSave.Image = global::PawnSystem.UI.Backend.Properties.Resources.Save_01;
-            this.buttonSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(110, 24);
-            this.buttonSave.Text = "[CTRL+S] Save";
-            this.buttonSave.ToolTipText = "Save";
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
-            // buttonPrintPawnTicket
-            // 
-            this.buttonPrintPawnTicket.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPrintPawnTicket.ForeColor = System.Drawing.Color.Black;
-            this.buttonPrintPawnTicket.Image = global::PawnSystem.UI.Backend.Properties.Resources.Contract;
-            this.buttonPrintPawnTicket.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonPrintPawnTicket.Name = "buttonPrintPawnTicket";
-            this.buttonPrintPawnTicket.Size = new System.Drawing.Size(130, 24);
-            this.buttonPrintPawnTicket.Text = "Print Pawn Ticket";
-            this.buttonPrintPawnTicket.ToolTipText = "Print Pawn Ticket";
-            this.buttonPrintPawnTicket.Visible = false;
-            this.buttonPrintPawnTicket.Click += new System.EventHandler(this.buttonPrintPawnTicket_Click);
-            // 
             // buttonNew
             // 
             this.buttonNew.Image = global::PawnSystem.UI.Backend.Properties.Resources.Document_Blank;
@@ -740,24 +759,6 @@
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            this.toolStripSeparator2.Visible = false;
-            // 
-            // buttonTransfer
-            // 
-            this.buttonTransfer.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTransfer.ForeColor = System.Drawing.Color.Black;
-            this.buttonTransfer.Image = global::PawnSystem.UI.Backend.Properties.Resources.Button_Next_01;
-            this.buttonTransfer.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.buttonTransfer.Name = "buttonTransfer";
-            this.buttonTransfer.Size = new System.Drawing.Size(131, 24);
-            this.buttonTransfer.Text = "[CTRL+T] Transfer";
-            this.buttonTransfer.ToolTipText = "Save";
-            this.buttonTransfer.Visible = false;
-            // 
             // formTransactionProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -771,7 +772,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "formTransactionProcess";

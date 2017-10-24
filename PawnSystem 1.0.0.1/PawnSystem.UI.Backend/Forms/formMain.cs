@@ -15,7 +15,7 @@ namespace PawnSystem.UI.Backend.Forms
     public partial class formMain : Form
     {
         public UserModel activeUser = new UserModel();
-        private void CloseAllForms(Form ParForm)
+        public void CloseAllForms(Form ParForm)
         {
             foreach (Form form in this.MdiChildren)
             {
