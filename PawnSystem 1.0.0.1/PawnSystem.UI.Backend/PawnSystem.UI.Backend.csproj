@@ -105,6 +105,12 @@
     <Compile Include="Forms\formAuctionDateProcess.Designer.cs">
       <DependentUpon>formAuctionDateProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\formBackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formBackupDatabase.Designer.cs">
+      <DependentUpon>formBackupDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\formCamera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formAuctionDateProcess.resx">
       <DependentUpon>formAuctionDateProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formBackupDatabase.resx">
+      <DependentUpon>formBackupDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\formCamera.resx">
       <DependentUpon>formCamera.cs</DependentUpon>

@@ -202,5 +202,13 @@ namespace PawnSystem.UI.Backend.Forms
             form.MdiParent = this;
             form.Show();
         }
+
+        private void backupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CloseAllForms(this);
+            formBackupDatabase form = new formBackupDatabase();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

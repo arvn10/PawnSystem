@@ -20,6 +20,10 @@ namespace PawnSystem.UI.Backend.Forms
         public string type ;
         public Int32 transactionID;
         public string pawnTicketNumber;
+
+        public formTransactionProcess formTransactionProcess { get; set; }
+        public formTransaction formTransaction { get; set; }
+
         public formClient()
         {
             InitializeComponent();
@@ -249,10 +253,9 @@ namespace PawnSystem.UI.Backend.Forms
                         ModifiedBy = activeUser.FirstName + " " + activeUser.LastName
                     }) != null)
                     {
-                        
                         MessageBox.Show("Transaction Transferrred", "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        formMain formMain = new formMain();
-                        formMain.CloseAllForms(formMain);
+                        formTransactionProcess.Dispose();
+                        formTransaction.loadData();
                         this.Dispose();
                     }
                 }

@@ -222,6 +222,7 @@ namespace PawnSystem.UI.Backend.Forms
             if (dataGrid.Rows.Count > 0)
             {
                 formTransactionProcess form = new formTransactionProcess();
+                form.formTransaction = this;
                 form.activeUser = activeUser;
                 form.processType = "View";
                 form.clientID = clientID;

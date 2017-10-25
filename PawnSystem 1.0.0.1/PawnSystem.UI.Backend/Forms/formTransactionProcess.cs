@@ -24,6 +24,7 @@ namespace PawnSystem.UI.Backend.Forms
         public int transactionID;
         public UserModel activeUser;
         public string processType;
+        public formTransaction formTransaction { get; set; }
 
 
         private ItemTypeService itemTypeService;
@@ -826,6 +827,8 @@ namespace PawnSystem.UI.Backend.Forms
         private void buttonTransfer_Click(object sender, EventArgs e)
         {
             formClient formClient = new formClient();
+            formClient.formTransactionProcess = this;
+            formClient.formTransaction = formTransaction;
             formClient.activeUser = activeUser;
             formClient.pawnTicketNumber = textPawnTicketNumber.Text;
             formClient.transactionID = transactionID;

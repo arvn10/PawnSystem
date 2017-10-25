@@ -372,3 +372,4 @@ C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Bac
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\OCB Pawnshop Management System.exe
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\OCB Pawnshop Management System.pdb
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formTransactionTransfer.resources
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formBackupDatabase.resources
