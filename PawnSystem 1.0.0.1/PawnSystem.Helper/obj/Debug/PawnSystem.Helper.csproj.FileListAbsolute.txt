@@ -6,7 +6,7 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Help
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\obj\Debug\PawnSystem.Helper.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\bin\Debug\PawnSystem.Helper.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\bin\Debug\PawnSystem.Helper.pdb
-C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\obj\Debug\PawnSystem.Helper.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\obj\Debug\PawnSystem.Helper.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\obj\Debug\PawnSystem.Helper.pdb
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\obj\Debug\PawnSystem.Helper.csprojResolveAssemblyReference.cache
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.Helper\obj\Debug\PawnSystem.Helper.csproj.CoreCompileInputs.cache

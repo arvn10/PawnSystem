@@ -504,11 +504,11 @@ namespace PawnSystem.UI.Backend.Forms
                 transactionCreateEdit.ItemTypeID = Convert.ToInt32(comboItemType.SelectedValue);
                 transactionCreateEdit.TicketTypeID = Convert.ToInt32(comboTicketType.SelectedValue);
                 transactionCreateEdit.Principal = Double.Parse(textPrincipal.Text);
-                transactionCreateEdit.Interest = Double.Parse(labelInterest.Text) + Double.Parse(labelPenalty.Text);
+                transactionCreateEdit.Interest = Double.Parse(labelInterest.Text);
                 transactionCreateEdit.ServiceCharge = Double.Parse(labelServiceCharge.Text);
                 transactionCreateEdit.NetProceed = Double.Parse(labelNetProceeds.Text);
-                transactionCreateEdit.Penalty = Double.Parse(labelPenalty.Text);
-                transactionCreateEdit.AppraiseValue = double.Parse(labelAppraisedValue.Text);
+                transactionCreateEdit.Penalty = transactionView != null? transactionView.Penalty : Double.Parse(labelPenalty.Text);
+                transactionCreateEdit.AppraiseValue = transactionView != null ? transactionView.AppraiseValue : double.Parse(labelAppraisedValue.Text);
                 transactionCreateEdit.PawnTicketNumber = textPawnTicketNumber.Text;
                 transactionCreateEdit.DateLoan = datePickerLoan.Value;
                 transactionCreateEdit.DateMaturity = datePickerMaturity.Value;
@@ -540,8 +540,7 @@ namespace PawnSystem.UI.Backend.Forms
                 }
                 else if (processType == "Renew" || processType == "Redeem")
                 {
-                    TransactionCreateEdit toUpdateTransaction = new TransactionCreateEdit();
-                    toUpdateTransaction = transactionService.Get().Select(x => new TransactionCreateEdit()
+                    TransactionCreateEdit toUpdateTransaction = transactionService.Get().Select(x => new TransactionCreateEdit()
                     {
                         ClientID = x.ClientID,
                         ItemTypeID = x.ItemTypeID,

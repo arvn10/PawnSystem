@@ -297,7 +297,6 @@ C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Bac
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\NodaTime.xml
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.BLL.IService.pdb
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.DAL.Core.pdb
-C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.DAL.Core.dll.config
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.DAL.Data.pdb
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\af\Humanizer.resources.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\ar\Humanizer.resources.dll
@@ -368,8 +367,20 @@ C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Bac
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formUserTypeProcess.resources
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Properties.Resources.resources
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.csproj.GenerateResource.Cache
-C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\OCB Pawnshop Management System.exe
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\OCB Pawnshop Management System.pdb
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formTransactionTransfer.resources
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.Forms.formBackupDatabase.resources
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.ConnectionInfoExtended.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.Smo.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.SmoExtended.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.SqlClrProvider.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.SqlEnum.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.Dmf.Common.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.Diagnostics.STrace.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.ServiceBrokerEnum.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\Microsoft.SqlServer.RegSvrEnum.dll
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\obj\Debug\PawnSystem.UI.Backend.csproj.CoreCompileInputs.cache
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.UI.Backend\bin\Debug\PawnSystem.DAL.Core.dll.config

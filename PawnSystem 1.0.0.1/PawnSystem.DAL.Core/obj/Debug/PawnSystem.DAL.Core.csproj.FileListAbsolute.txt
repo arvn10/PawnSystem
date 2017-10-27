@@ -81,6 +81,6 @@ C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Co
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\EntityFramework.xml
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csprojResolveAssemblyReference.cache
-C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.pdb
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Core\obj\Debug\PawnSystem.DAL.Core.csproj.CoreCompileInputs.cache

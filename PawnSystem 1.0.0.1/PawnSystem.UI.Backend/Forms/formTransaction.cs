@@ -36,14 +36,14 @@ namespace PawnSystem.UI.Backend.Forms
             if (searchValue == null)
             {
                 data = transactionService.Get().Where(x => x.ClientID == clientID).AsQueryable()
-                                                              .OrderByDescending(x => x.PawnTicketNumber)
+                                                              .OrderByDescending(x => x.DateLoan)
                                                               .ToList();
             }
             else
             {
                 data = transactionService.Get().Where(x => x.ClientID == clientID &&
                                                                           x.PawnTicketNumber.Contains(searchValue))
-                                                              .OrderByDescending(x => x.PawnTicketNumber)
+                                                              .OrderByDescending(x => x.DateLoan)
                                                               .ToList();
             }
 

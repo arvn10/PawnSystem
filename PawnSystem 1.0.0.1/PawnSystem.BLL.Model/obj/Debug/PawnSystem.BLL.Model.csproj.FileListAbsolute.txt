@@ -37,6 +37,6 @@ C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Mo
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\bin\Debug\PawnSystem.DAL.Data.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\bin\Debug\PawnSystem.DAL.Data.pdb
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.csprojResolveAssemblyReference.cache
-C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.pdb
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.BLL.Model\obj\Debug\PawnSystem.BLL.Model.csproj.CoreCompileInputs.cache

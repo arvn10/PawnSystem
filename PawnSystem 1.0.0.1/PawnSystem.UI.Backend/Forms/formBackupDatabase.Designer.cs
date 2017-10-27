@@ -33,7 +33,7 @@
             this.buttonOpenSaveLocation = new System.Windows.Forms.Button();
             this.buttonBackup = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.Percent = new System.Windows.Forms.Label();
+            this.labelPercent = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
@@ -77,15 +77,15 @@
             this.progressBar.Size = new System.Drawing.Size(263, 23);
             this.progressBar.TabIndex = 4;
             // 
-            // Percent
+            // labelPercent
             // 
-            this.Percent.AutoSize = true;
-            this.Percent.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Percent.Location = new System.Drawing.Point(8, 103);
-            this.Percent.Name = "Percent";
-            this.Percent.Size = new System.Drawing.Size(26, 15);
-            this.Percent.TabIndex = 5;
-            this.Percent.Text = "0 %";
+            this.labelPercent.AutoSize = true;
+            this.labelPercent.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPercent.Location = new System.Drawing.Point(8, 103);
+            this.labelPercent.Name = "labelPercent";
+            this.labelPercent.Size = new System.Drawing.Size(26, 15);
+            this.labelPercent.TabIndex = 5;
+            this.labelPercent.Text = "0 %";
             // 
             // label2
             // 
@@ -114,7 +114,7 @@
             this.ClientSize = new System.Drawing.Size(402, 146);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Percent);
+            this.Controls.Add(this.labelPercent);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.buttonBackup);
             this.Controls.Add(this.buttonOpenSaveLocation);
@@ -126,6 +126,7 @@
             this.Name = "formBackupDatabase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Backup Database";
+            this.Load += new System.EventHandler(this.formBackupDatabase_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,7 +138,7 @@
         private System.Windows.Forms.Button buttonOpenSaveLocation;
         private System.Windows.Forms.Button buttonBackup;
         private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Label Percent;
+        private System.Windows.Forms.Label labelPercent;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;

@@ -29,6 +29,6 @@ C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.
 C:\Users\acamacho\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\bin\Debug\PawnSystem.DAL.Data.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\bin\Debug\PawnSystem.DAL.Data.pdb
-C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.csproj.CoreCompileInputs.cache
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.dll
 C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.pdb
+C:\Users\BOK-PC\Documents\GitHub\PawnSystem\PawnSystem 1.0.0.1\PawnSystem.DAL.Data\obj\Debug\PawnSystem.DAL.Data.csproj.CoreCompileInputs.cache
