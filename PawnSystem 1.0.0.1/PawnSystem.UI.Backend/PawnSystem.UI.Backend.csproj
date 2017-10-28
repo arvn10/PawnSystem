@@ -83,6 +83,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
@@ -652,6 +653,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Coinstack.ico" />
+    <None Include="Resources\system-database-icon.png" />
     <None Include="Resources\Button Next-01.ico" />
     <None Include="Resources\ocb icon.png" />
     <None Include="Resources\Zoom-01.ico" />

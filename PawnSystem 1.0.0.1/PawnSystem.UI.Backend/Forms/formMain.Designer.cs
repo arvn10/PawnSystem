@@ -218,6 +218,7 @@
             // 
             this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backupToolStripMenuItem});
+            this.databaseToolStripMenuItem.Image = global::PawnSystem.UI.Backend.Properties.Resources.system_database_icon;
             this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
             this.databaseToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.databaseToolStripMenuItem.Text = "Database";

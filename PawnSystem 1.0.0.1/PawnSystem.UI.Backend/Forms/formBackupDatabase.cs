@@ -6,10 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Management;
 using System.Windows.Forms;
 using System.Configuration;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.SqlServer.Management.Common;
+using System.IO;
+using System.Security.AccessControl;
 
 namespace PawnSystem.UI.Backend.Forms
 {
@@ -18,15 +21,6 @@ namespace PawnSystem.UI.Backend.Forms
         public formBackupDatabase()
         {
             InitializeComponent();
-        }
-
-        private void buttonOpenSaveLocation_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = folderBrowserDialog.ShowDialog();
-            if (dialogResult == DialogResult.OK)
-            {
-                textPath.Text = folderBrowserDialog.SelectedPath + @"\PawnSystem " + DateTime.Now.ToString("yyyy-MM-dd hh.mm.ss") + ".bak";
-            }
         }
 
         private void buttonBackup_Click(object sender, EventArgs e)
@@ -64,16 +58,21 @@ namespace PawnSystem.UI.Backend.Forms
                         }
                     }
                 }
-                MessageBox.Show(dataSource);
+
+                if(!Directory.Exists("C:\\PawnSystem Database Backup"))
+                {
+                    Directory.CreateDirectory("C:\\PawnSystem Database Backup");
+                }
                 Server databaseServer = new Server(new ServerConnection(dataSource, username, password));
                 Backup databaseBackup = new Backup() { Action = BackupActionType.Database, Database = database };
-                databaseBackup.Devices.AddDevice(textPath.Text, DeviceType.File);
+                string file = @"C:\PawnSystem Database Backup\PawnSystem " + DateTime.Now.ToString("yyyy-MM-dd hh.mm.ss") + ".bak";
+                databaseBackup.Devices.AddDevice(file, DeviceType.File);
                 databaseBackup.Initialize = true;
                 databaseBackup.PercentComplete += DatabaseBackup_PercentComplete;
                 databaseBackup.Complete += DatabaseBackup_Complete;
                 databaseBackup.SqlBackupAsync(databaseServer);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Pawnshop Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
